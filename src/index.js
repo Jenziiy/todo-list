@@ -2,9 +2,12 @@ import css from "./file.css";
 
 function component() {
   const div = document.createElement('div');
-  div.innerHTML = 'hello im an entry to this app'
   div.id = 'mainComponent';
-  document.body.appendChild(div);
+  div.innerHTML = ` <div id="add-task"> 
+  <input type="text" placeholder="Insert future accomplishment"> 
+  <button id="add-task-button">Lets go</button>
+</div> `
+document.body.appendChild(div);
 }
 
 component();
