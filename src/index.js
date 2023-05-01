@@ -6,3 +6,5 @@ function component() {
   div.id = 'mainComponent';
   document.body.appendChild(div);
 }
+
+component();
