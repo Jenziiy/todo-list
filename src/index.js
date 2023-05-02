@@ -1,3 +1,4 @@
+import { ToDoItem } from "./ToDoItem";
 import css from "./file.css";
 
 function component() {
@@ -11,3 +12,4 @@ document.body.appendChild(div);
 }
 
 component();
+const item = new ToDoItem("hi","hi","hi");

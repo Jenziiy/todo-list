@@ -1,4 +1,4 @@
-const ToDoItem = class ToDoItem {
+export class ToDoItem {
 
   constructor(title, description, dueDate, priority) {
     this.title = title;
@@ -6,6 +6,4 @@ const ToDoItem = class ToDoItem {
     this.dueDate = dueDate;
     this.priority = priority;
   }
-};
-
-export default ToDoItem;
+}
