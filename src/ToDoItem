@@ -1,8 +1,5 @@
 const ToDoItem = class ToDoItem {
-  title;
-  description;
-  dueDate;
-  priority;
+
   constructor(title, description, dueDate, priority) {
     this.title = title;
     this.description = description;
