@@ -13,7 +13,7 @@ function component() {
 <option> Priority </option>
 <option> A ~ ASAP </option>
 <option> B ~ this week </option>
-<option> C ~ fun </option>
+<option> C ~ 4 fun </option>
 </select>
   <button id="add-task-button">Lets go</button>
 </div> `
