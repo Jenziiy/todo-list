@@ -21,4 +21,8 @@ document.body.appendChild(div);
 }
 
 component();
-const item = new ToDoItem("hi","hi","hi");
+const button = document.getElementById('add-task-button');
+button.addEventListener('click', () => { let inputTitle = document.getElementById('input-title')
+let inputTitleValue = inputTitle.value;
+  let item = new ToDoItem(inputTitleValue, 'a', 'b', 'c')
+item.createUI()  } );
