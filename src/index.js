@@ -1,8 +1,5 @@
-import { ToDoItem } from "./ToDoItem";
 import css from "./file.css";
 import { createForm } from "./view";
-import { button, createDiv } from "./util";
-const createForms = '"./view"';
 
 function component() {
   
