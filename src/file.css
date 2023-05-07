@@ -11,14 +11,11 @@ body{
 }
  #mainComponent{
     width: 45%;
-    top: 20%;
-    left: 50%;
     background: white;
     border-radius: 10px;
     min-width: 450px;
-    position: absolute;
-    min-height: 110px;
-    transform: translate(-50%,-50%);
+    /* position: absolute; */
+    min-height: 120px;
  };
 #add-task{
   display: grid;
@@ -73,6 +70,16 @@ body{
   height: 45px;
   border-radius: 5px;
   font-family: 'Poppins',sans-serif;
+}
+
+#todo-item {
+  border: black solid 1px;
+  background: pink;
+}
+
+#todo-item>p {
+  border: black solid 1px;
+  background: white;
 }
 
 /* #input-dropdown{

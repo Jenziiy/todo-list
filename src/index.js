@@ -6,10 +6,10 @@ function component() {
   const div = document.createElement('div');
   div.id = 'mainComponent';
   div.innerHTML = ` <div id="add-task"> 
-  <input type="text" id="input-title" placeholder="Insert future accomplishment"> 
-  <input type="text" id="input-description" placeholder="Insert future accomplishment description">
-  <input type="date" id="input-date" value="${date}">  
-  <select id = "input-dropdown">
+  <input type="text" class="input" id="input-title" placeholder="Insert future accomplishment"> 
+  <input type="text" class="input" id="input-description" placeholder="Insert future accomplishment description">
+  <input type="date" class="input" id="input-date" value="${date}">  
+  <select class="input" id = "input-dropdown">
 <option> Priority </option>
 <option> A ~ ASAP </option>
 <option> B ~ this week </option>
@@ -20,9 +20,18 @@ function component() {
 document.body.appendChild(div);
 }
 
+function getInputColl(...n) {
+  const valueArr = [];
+    for( let i of n ){
+    let value = document.getElementsByClassName('input')[i].value;
+    valueArr.push(value);
+  }
+  return valueArr;
+ }
+ 
 component();
 const button = document.getElementById('add-task-button');
 button.addEventListener('click', () => { let inputTitle = document.getElementById('input-title')
-let inputTitleValue = inputTitle.value;
-  let item = new ToDoItem(inputTitleValue, 'a', 'b', 'c')
+  let item = new ToDoItem(...(getInputColl('0', '1', '2', '3')))
 item.createUI()  } );
+
