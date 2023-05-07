@@ -1,9 +1,15 @@
 import { date } from "./util"
+import { createDiv } from "./util";
 
 export function createForm(){
   const form = document.createElement('div');
   form.id = 'add-task';
-  
+  // createDiv('','form');
+  // createDiv('form','container-1',  ['input,input-title,input,text,Insert future accomplishment', 
+  //                                   'input,input-description,input,text,Insert description',
+  //                                   'input,input-date,date']);
+  // createDiv('form','container-2',['select,input,input-dropdown',
+  //                                 ]);
 
   return `<div id="add-task">
   <div id="container-1">
