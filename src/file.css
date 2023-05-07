@@ -6,20 +6,28 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
+    display: grid;
+    justify-content: center;
+    max-height: 100vh;
     background: pink;
+    row-gap: 20px;
 }
  #mainComponent{
-    width: 45%;
+    padding: 10px;
+    margin-top: 5%;
+    display: flex;
+    justify-self: center;
+    max-height: 150px;
     background: white;
     border-radius: 10px;
     min-width: 450px;
-    /* position: absolute; */
     min-height: 120px;
+
  };
 #add-task{
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  width: 100%;
+  grid-template-columns: repeat(3,1fr);
   grid-template-rows: auto auto auto;
   grid-gap: 10px;
   justify-content: center;
@@ -47,17 +55,9 @@ body{
   border-color: #617f91;
 }
 #add-task-button{
-  grid-column: 2;
-  justify-self: center;
+  grid-column: 2/3;
   width: 20%;
-  height: 40px;
   background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  position: relative;
-  float: right;
   font-weight: 500;
   font-size: 16px;
   background-color: #71a4aa;
@@ -65,8 +65,6 @@ body{
   color: #ffffff;
   cursor: pointer;
   outline: none;
-  margin-bottom: 10px;
-  width: 20%;
   height: 45px;
   border-radius: 5px;
   font-family: 'Poppins',sans-serif;
@@ -81,9 +79,6 @@ body{
   border: black solid 1px;
   background: white;
 }
-
-/* #input-dropdown{
-  /* float: right; */
 
 @media (max-width: 768px) {
   #add-task {

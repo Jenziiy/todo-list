@@ -16,6 +16,6 @@ export class ToDoItem {
     <p>${this.description}</p>
     <p>${this.dueDate}</p>
     <p>${this.priority}</p>`
-    mainComponent.appendChild(div);
+    document.body.appendChild(div);
   }
 }
