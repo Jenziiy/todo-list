@@ -73,11 +73,13 @@ body{
 #todo-item {
   border: black solid 1px;
   background: pink;
+  width: 200px;
 }
 
 #todo-item>p {
   border: black solid 1px;
   background: white;
+  height: 28px;
 }
 
 @media (max-width: 768px) {
