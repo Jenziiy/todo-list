@@ -7,9 +7,16 @@ export function createForm(){
   // createDiv('','form');
   // createDiv('form','container-1',  ['input,input-title,input,text,Insert future accomplishment', 
   //                                   'input,input-description,input,text,Insert description',
-  //                                   'input,input-date,date']);
+  //                                   'input,input-date, input,date']);
   // createDiv('form','container-2',['select,input,input-dropdown',
-  //                                 ]);
+  //                                 'button,add-task-button,input']);
+  // const inputDropDown = document.getElementById('input-dropdown');
+  // inputDropDown.innerHTML =       `
+  //                                   <option> Priority </option>
+  //                                   <option> A ~ ASAP </option>
+  //                                   <option> B ~ this week </option>
+  //                                   <option> C ~ 4 fun </option>`;
+
 
   return `<div id="add-task">
   <div id="container-1">
