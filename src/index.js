@@ -24,10 +24,10 @@ function component() {
 document.body.appendChild(div);
 }
 
-function getInputColl(...n) {
+function getInputColl(...args) {
   const valueArr = [];
-    for( let i of n ){
-    let value = document.getElementsByClassName('input')[i].value;
+    for( let arg of args ){
+    let value = document.getElementsByClassName('input')[arg].value;
     valueArr.push(value);
   }
   return valueArr;
