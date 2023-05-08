@@ -1,13 +1,10 @@
 import css from "./file.css";
+import { mainWrapper } from "./util";
 import { createForm, createPageStructure } from "./view";
 function component() {
-  
-  const div = document.createElement('div');
-  div.id = 'mainComponent';
+
   createPageStructure();
-  const mainWrapper = document.getElementById('main-wrapper');
-  const form = document.getElementById('add-task');
-  mainWrapper.appendChild(form);
+  mainWrapper.appendChild(createForm());
 }
 
 function getInputColl(...args) {
@@ -19,4 +16,4 @@ function getInputColl(...args) {
   return valueArr;
  }
  
-component();
+import('./view').then(()=> component());

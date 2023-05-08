@@ -25,6 +25,10 @@ export function createForm(){
   form.setAttribute("action", "submit");
   form.appendChild(createFormInput('Task: ', 'What you gonna do?'));
   form.appendChild(createFormInput('Description: ', 'pLz eLaBoRaTe?'));
+  let button = document.createElement('button');
+  button.id = 'add-task-button';
+  form.appendChild(button);
+  return form;
 };
 
 function createFormInput(labelName, placeholder){
@@ -33,21 +37,22 @@ function createFormInput(labelName, placeholder){
   let input = document.createElement('input');
   input.setAttribute(`placeholder`, placeholder);
   input.appendChild(label);
+  return input;
 }
 
-   `<div id="add-task">
-  <div id="container-1">
-    <input type="text" class="input" id="input-title" placeholder="Insert future accomplishment"> 
-    <input type="text" class="input" id="input-description" placeholder="Insert future accomplishment description">
-    <input type="date" class="input" id="input-date" value="${date}">  
-  </div>
-  <div id="container-2">
-    <select class="input" id = "input-dropdown">
-      <option> Priority </option>
-      <option> A ~ ASAP </option>
-      <option> B ~ this week </option>
-      <option> C ~ 4 fun </option>
-    </select>
-    <button id="add-task-button">Lets go</button>
-  </div>
-</div> `
+//    `<div id="add-task">
+//   <div id="container-1">
+//     <input type="text" class="input" id="input-title" placeholder="Insert future accomplishment"> 
+//     <input type="text" class="input" id="input-description" placeholder="Insert future accomplishment description">
+//     <input type="date" class="input" id="input-date" value="${date}">  
+//   </div>
+//   <div id="container-2">
+//     <select class="input" id = "input-dropdown">
+//       <option> Priority </option>
+//       <option> A ~ ASAP </option>
+//       <option> B ~ this week </option>
+//       <option> C ~ 4 fun </option>
+//     </select>
+//     <button id="add-task-button">Lets go</button>
+//   </div>
+// </div> `

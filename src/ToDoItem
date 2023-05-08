@@ -16,8 +16,8 @@ title;description;dueDate;priority;dateString;
   createUI(){
      if (this.dueDate != undefined) { 
       let dateArr = this.dueDate.toString().split('-'); 
-      this.dateString = `${dateArr[2]}-${dateArr[1]}-${dateArr[0]}`; }
-    const mainComponent = document.getElementById('mainComponent');
+      this.dateString = `${dateArr[2]}-${dateArr[1]}-${dateArr[0]}`; 
+      }
     const div = document.createElement('div');
     div.id = 'todo-item';
     div.innerHTML = `
