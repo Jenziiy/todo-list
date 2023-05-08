@@ -5,9 +5,7 @@ function component() {
   
   const div = document.createElement('div');
   div.id = 'mainComponent';
-  div.innerHTML =  createForm(); //gaat div.appendchild createform() worden. 
-  // div.appendChild(createForm());
-  
+  div.innerHTML =  createForm(); 
 document.body.appendChild(div);
 }
 

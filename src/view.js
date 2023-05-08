@@ -1,6 +1,22 @@
 import { date } from "./util"
 import { createDiv } from "./util";
 
+const htmlPageStructure = {
+  header: document.createElement('header'),
+  main:  document.createElement('main'),
+  footer: document.createElement('footer'),
+};
+
+for ( const prop in htmlPageStructure ) {
+  let element = htmlPageStructure[prop];
+  element.classList.add('page-sections');
+  document.body.appendChild(element);
+ let childWrapper = document.createElement('div');
+ childWrapper.setAttribute(`id`, `${prop}-wrapper`);
+ element.appendChild(childWrapper);
+  
+}
+
 export function createForm(){
   return `<div id="add-task">
   <div id="container-1">
