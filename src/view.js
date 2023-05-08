@@ -1,5 +1,6 @@
-import { date } from "./util"
+import { date, getInputColl } from "./util"
 import { createDiv } from "./util";
+import { ToDoItem } from "./ToDoItem";
 
 const htmlPageStructure = {
   header: document.createElement('header'),
@@ -19,12 +20,14 @@ export function createPageStructure(){
 }
 
 export function createForm(){
-  let form = document.createElement('form');
+  // let form = document.createElement('form');
+  let form = document.createElement('div');
   form.id = 'add-task';
-  form.setAttribute("method","post");
-  form.setAttribute("action", "submit");
+  // form.setAttribute("method","post");
+  // form.setAttribute("action", "submit");
   form.appendChild(createFormInput('Task: ', 'What you gonna do?'));
   form.appendChild(createFormInput('Description: ', 'pLz eLaBoRaTe?'));
+  
   let button = document.createElement('button');
   button.id = 'add-task-button';
   form.appendChild(button);
@@ -35,10 +38,22 @@ function createFormInput(labelName, placeholder){
   let label = document.createElement('label');
   label.innerText = labelName;
   let input = document.createElement('input');
+  input.className = 'input';
   input.setAttribute(`placeholder`, placeholder);
   input.appendChild(label);
   return input;
 }
+
+function createApp(){
+  createPageStructure();
+  const mainWrapper = document.getElementById('main-wrapper');
+  mainWrapper.appendChild(createForm());
+  const button = document.getElementById('add-task-button');
+  button.addEventListener('click', () => { console.log('btn');let item = new ToDoItem(...(getInputColl('0', '1', '2', '3')))
+item.createUI()  })
+}
+
+createApp();
 
 //    `<div id="add-task">
 //   <div id="container-1">
