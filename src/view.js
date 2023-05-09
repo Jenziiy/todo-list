@@ -40,7 +40,7 @@ export function createForm(){
   containerInputFields.appendChild(createFormInput('Description: ', 'pLz eLaBoRaTe?', 'description'));
   containerSelectFields.appendChild(createFormDate('Date: ','date'));
   containerSelectFields.appendChild(createSelectOptions('Select: ', 'priority'));
-  containerSelectFields.appendChild(createCheckbox('Completed: ', 'checkbox'));
+  // containerSelectFields.appendChild(createCheckbox('Completed: ', 'checkbox'));
 
   let button = document.createElement('button');
   button.id = 'add-task-button';

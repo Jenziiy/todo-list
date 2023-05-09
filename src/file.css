@@ -23,7 +23,8 @@ body{
     min-width: 450px;
     min-height: 120px;
 
- };
+ }
+ 
 #add-task{
   display: grid;
   width: 100%;
