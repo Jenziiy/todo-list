@@ -25,6 +25,6 @@ export class ToDoItem {
          this.priority[0] == 'B' ||
          this.priority[0] == 'C' ? this.priority : 'Missing priority'}</p>
     <p> Completed <input type="checkbox" id="complete" name="complete" unchecked> </p> `
-    document.body.appendChild(div);
+    document.getElementsByTagName('main')[0].appendChild(div);
   }
 }
