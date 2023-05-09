@@ -102,9 +102,13 @@ body{
 #todo-item>:nth-child(n + 2) {
   border-top: black solid 1px;
 }
+#todo-item>:last-child{
+display: flex;
+justify-content: space-between;
+}
 
 #todo-item>p{
-  padding: 5px;
+  padding: 6px 7px;
   height: 28px;
   
 }
