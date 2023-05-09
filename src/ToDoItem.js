@@ -1,8 +1,3 @@
-import { date } from "./util";
-
-// let dateArr = date.toString().split('-');
-// let dateString = `${dateArr[2]}-${dateArr[1]}-${dateArr[0]}`;
-
 export class ToDoItem {
 
   constructor(title, description, dueDate, priority) {
