@@ -1,4 +1,4 @@
-import { getInputColl } from "./util"
+import { buttonLogic, el } from "./util";
 import { ToDoItem } from "./ToDoItem";
 
 const date = new Date().toLocaleDateString('en-CA');
@@ -8,6 +8,12 @@ const htmlPageStructure = {
   main:  document.createElement('main'),
   footer: document.createElement('footer'),
 };
+
+export function createPage(){
+  createPageStructure();
+  el('main-wrapper').appendChild(createForm());
+  buttonLogic();
+}
 
 export function createPageStructure(){
   for ( const prop in htmlPageStructure ) {
@@ -58,15 +64,6 @@ function createFormDate(){
   input.appendChild(label);
   return input;
 }
-
-function createApp(){
-  createPageStructure();
-  const mainWrapper = document.getElementById('main-wrapper');
-  mainWrapper.appendChild(createForm());
-
-}
-
-createApp();
 
 //    `<div id="add-task">
 //   <div id="container-1">
