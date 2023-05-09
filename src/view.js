@@ -32,37 +32,57 @@ export function createForm(){
   form.id = 'add-task';
   // form.setAttribute("method","post");
   // form.setAttribute("action", "submit");
-  form.appendChild(createFormInput('Task: ', 'What you gonna do?'));
-  form.appendChild(createFormInput('Description: ', 'pLz eLaBoRaTe?'));
-  form.appendChild(createFormDate());
+  let containerInputFields = document.createElement('div');
+  containerInputFields.id = 'form-inputfields';
+  let containerSelectFields = document.createElement('div');
+  containerSelectFields.id = 'form-selectfields';
+  containerInputFields.appendChild(createFormInput('Task: ', 'What you gonna do?', 'task'));
+  containerInputFields.appendChild(createFormInput('Description: ', 'pLz eLaBoRaTe?', 'description'));
+  containerSelectFields.appendChild(createFormDate('Date: ','date'));
 
 
   let button = document.createElement('button');
   button.id = 'add-task-button';
   button.innerText = 'add task';
-  form.appendChild(button);
+  containerSelectFields.appendChild(button);
+  form.appendChild(containerInputFields);
+  form.appendChild(containerSelectFields);
   return form;
 };
 
-function createFormInput(labelName, placeholder){
+function createFieldWrapper(id, className, label, field){
+  let div = document.createElement('div');
+  div.id = id;
+  div.className = className;
+  div.appendChild(label);
+  div.appendChild(field);
+  return div;
+}
+
+function createFormInput(labelName, placeholder, name){
+  
   let label = document.createElement('label');
+  label.for = name;
   label.innerText = labelName;
   let input = document.createElement('input');
   input.className = 'input';
+  input.name = name;
   input.type = 'text';
   input.setAttribute(`placeholder`, placeholder);
-  input.appendChild(label);
-  return input;
+  return createFieldWrapper(name, 'inputdiv', label, input);
 }
 
-function createFormDate(){
+function createFormDate(labelName, name){
   let label = document.createElement('label');
+  label.for = name;
+  label.innerText = labelName;
   let input = document.createElement('input');
+  input.name = name;
   input.className = 'input';
   input.type = 'date';
   input.setAttribute(`value`, date);
-  input.appendChild(label);
-  return input;
+  return createFieldWrapper(name, 'inputdiv', label, input);
+
 }
 
 //    `<div id="add-task">
