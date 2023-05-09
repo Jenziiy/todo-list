@@ -39,6 +39,7 @@ export function createForm(){
   containerInputFields.appendChild(createFormInput('Task: ', 'What you gonna do?', 'task'));
   containerInputFields.appendChild(createFormInput('Description: ', 'pLz eLaBoRaTe?', 'description'));
   containerSelectFields.appendChild(createFormDate('Date: ','date'));
+  containerSelectFields.appendChild(createSelectOptions('Select: ', 'priority'));
 
 
   let button = document.createElement('button');
@@ -82,6 +83,25 @@ function createFormDate(labelName, name){
   input.type = 'date';
   input.setAttribute(`value`, date);
   return createFieldWrapper(name, 'inputdiv', label, input);
+
+}
+
+function createSelectOptions(labelName, name){
+  let label = document.createElement('label');
+  let select = document.createElement('select');
+  select.name = name;
+  select.id = 'input-dropdown';
+  select.className = 'input';
+  label.for = name;
+  label.innerText = labelName;
+  const values = ["Priority", "A - ASAP", "B - This week", "C - 4 fun"];
+  for (const val of values) {
+    let option = document.createElement('option');
+    option.value = val;
+    option.text = val.charAt(0).toUpperCase() + val.slice(1);
+    select.appendChild(option); }
+    return createFieldWrapper(name, 'inputdiv', label, select);
+
 
 }
 
