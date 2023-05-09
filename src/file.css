@@ -24,12 +24,32 @@ body{
     min-height: 120px;
 
  }
- 
+
+ .inputdiv{
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+  align-content: space-between;
+  min-width: 280px;
+ }
+
+ #input-dropdown{
+  border: silver solid 1px;
+  border-radius: 5px;
+  width: 196px !important;
+  height: 30px;
+  
+ }
+
 #add-task{
+  padding: 1em;
+  background-color: white;
+  border: silver solid 1px;
+  border-radius: 10px;
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: auto auto auto;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
   grid-gap: 10px;
   justify-content: center;
   align-items: center;
@@ -56,8 +76,9 @@ body{
   border-color: #617f91;
 }
 #add-task-button{
-  grid-column: 2/3;
-  width: 20%;
+  grid-column: 2;
+  width: 70%;
+  justify-self: end;
   background-color: #007bff;
   font-weight: 500;
   font-size: 16px;

@@ -38,16 +38,16 @@ export function createForm(){
   containerSelectFields.id = 'form-selectfields';
   containerInputFields.appendChild(createFormInput('Task: ', 'What you gonna do?', 'task'));
   containerInputFields.appendChild(createFormInput('Description: ', 'pLz eLaBoRaTe?', 'description'));
-  containerSelectFields.appendChild(createFormDate('Date: ','date'));
+  containerSelectFields.appendChild(createFormDate('Due date: ','date'));
   containerSelectFields.appendChild(createSelectOptions('Select: ', 'priority'));
   // containerSelectFields.appendChild(createCheckbox('Completed: ', 'checkbox'));
 
   let button = document.createElement('button');
   button.id = 'add-task-button';
   button.innerText = 'add task';
-  containerSelectFields.appendChild(button);
   form.appendChild(containerInputFields);
   form.appendChild(containerSelectFields);
+  form.appendChild(button);
   return form;
 };
 
