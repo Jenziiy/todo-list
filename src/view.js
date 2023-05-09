@@ -13,6 +13,7 @@ export function createPage(){
   createPageStructure();
   el('main-wrapper').appendChild(createForm());
   buttonLogic();
+  createItemContainer();
 }
 
 export function createPageStructure(){
@@ -114,4 +115,10 @@ function createCheckbox(labelName, name){
   input.type = 'checkbox';
   input.setAttribute(`value`, 1);
   return createFieldWrapper(name, 'inputdiv', label, input);
+}
+
+function createItemContainer(){
+  const itemContainer = document.createElement('div');
+  itemContainer.id = 'item-container';
+  document.getElementsByTagName('main')[0].appendChild(itemContainer);
 }

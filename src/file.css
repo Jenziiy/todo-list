@@ -113,6 +113,17 @@ justify-content: space-between;
   
 }
 
+main{
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+#item-container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-auto-flow: row;
+}
+
 @media (max-width: 768px) {
   #add-task {
     grid-template-columns: 1fr;
