@@ -4,9 +4,12 @@ import { createForm, createPageStructure } from "./view";
 
 function component() {
 
-  // createPageStructure();
-  // const mainWrapper = document.getElementById('main-wrapper');
-  // mainWrapper.appendChild(createForm());
+   createPageStructure();
+   const mainWrapper = document.getElementById('main-wrapper');
+   mainWrapper.appendChild(createForm());
+   
 }
  
-import('./view').then(()=> component());
+component();
+const button = document.getElementById('add-task-button');
+button.onclick = console.log(1);

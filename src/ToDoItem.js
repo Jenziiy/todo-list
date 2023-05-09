@@ -4,13 +4,12 @@ import { date } from "./util";
 // let dateString = `${dateArr[2]}-${dateArr[1]}-${dateArr[0]}`;
 
 export class ToDoItem {
-title;description;dueDate;priority;dateString;
 
   constructor(title, description, dueDate, priority) {
-    this.title = title;
-    this.description = description;
-    this.dueDate = dueDate;
-    this.priority = priority;
+    this.title = title ? title : 'ok';
+    this.description = description ? description : 'ok';
+    this.dueDate = dueDate ? dueDate : 'ok';
+    this.priority = priority ? priority : 'A';
   }
 
   createUI(){

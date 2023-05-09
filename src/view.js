@@ -1,6 +1,7 @@
-import { date, getInputColl } from "./util"
-import { createDiv } from "./util";
+import { getInputColl } from "./util"
 import { ToDoItem } from "./ToDoItem";
+
+const date = new Date().toLocaleDateString('en-CA');
 
 const htmlPageStructure = {
   header: document.createElement('header'),
@@ -27,9 +28,12 @@ export function createForm(){
   // form.setAttribute("action", "submit");
   form.appendChild(createFormInput('Task: ', 'What you gonna do?'));
   form.appendChild(createFormInput('Description: ', 'pLz eLaBoRaTe?'));
-  
+  form.appendChild(createFormDate());
+
+
   let button = document.createElement('button');
   button.id = 'add-task-button';
+  button.innerText = 'add task';
   form.appendChild(button);
   return form;
 };
@@ -39,7 +43,18 @@ function createFormInput(labelName, placeholder){
   label.innerText = labelName;
   let input = document.createElement('input');
   input.className = 'input';
+  input.type = 'text';
   input.setAttribute(`placeholder`, placeholder);
+  input.appendChild(label);
+  return input;
+}
+
+function createFormDate(){
+  let label = document.createElement('label');
+  let input = document.createElement('input');
+  input.className = 'input';
+  input.type = 'date';
+  input.setAttribute(`value`, date);
   input.appendChild(label);
   return input;
 }
@@ -48,9 +63,7 @@ function createApp(){
   createPageStructure();
   const mainWrapper = document.getElementById('main-wrapper');
   mainWrapper.appendChild(createForm());
-  const button = document.getElementById('add-task-button');
-  button.addEventListener('click', () => { console.log('btn');let item = new ToDoItem(...(getInputColl('0', '1', '2', '3')))
-item.createUI()  })
+
 }
 
 createApp();

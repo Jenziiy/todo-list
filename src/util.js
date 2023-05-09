@@ -10,7 +10,9 @@ export function getInputColl(...args) {
   return valueArr;
  }
 
- export const date = new Date().toLocaleDateString('en-CA');
+ const button = document.getElementById('add-task-button');
+ button.addEventListener('click', () => { console.log('btn');let item = new ToDoItem(...(getInputColl('0', '1', '2', '3')))
+item.createUI()  })
 
 //  const button = document.getElementById('add-task-button');
 //  if(button){
