@@ -1,6 +1,7 @@
 import { ToDoItem } from "./ToDoItem";
+import { createForm } from "./view";
 
-function getInputColl(...args) {
+export function getInputColl(...args) {
   const valueArr = [];
     for( let arg of args ){
     let value = document.getElementsByClassName('input')[arg].value;
@@ -9,10 +10,11 @@ function getInputColl(...args) {
   return valueArr;
  }
 
-import("./view").then(()=> { const button = document.getElementById('add-task-button');
-button.addEventListener('click', () => { let item = new ToDoItem(...(getInputColl('0', '1', '2', '3')))
-item.createUI()  })} );
+ export const date = new Date().toLocaleDateString('en-CA');
 
-export const date = new Date().toLocaleDateString('en-CA');
+//  const button = document.getElementById('add-task-button');
+//  if(button){
+// import("./view").then(()=> { 
+// button.addEventListener('click', () => { console.log('btn');let item = new ToDoItem(...(getInputColl('0', '1', '2', '3')))
+// item.createUI()  })} );}
 
-export const mainWrapper = document.getElementById('main-wrapper');
