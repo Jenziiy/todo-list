@@ -40,7 +40,7 @@ export function createForm(){
   containerInputFields.appendChild(createFormInput('Description: ', 'pLz eLaBoRaTe?', 'description'));
   containerSelectFields.appendChild(createFormDate('Date: ','date'));
   containerSelectFields.appendChild(createSelectOptions('Select: ', 'priority'));
-
+  containerSelectFields.appendChild(createCheckbox('Completed: ', 'checkbox'));
 
   let button = document.createElement('button');
   button.id = 'add-task-button';
@@ -102,22 +102,16 @@ function createSelectOptions(labelName, name){
     select.appendChild(option); }
     return createFieldWrapper(name, 'inputdiv', label, select);
 
-
 }
 
-//    `<div id="add-task">
-//   <div id="container-1">
-//     <input type="text" class="input" id="input-title" placeholder="Insert future accomplishment"> 
-//     <input type="text" class="input" id="input-description" placeholder="Insert future accomplishment description">
-//     <input type="date" class="input" id="input-date" value="${date}">  
-//   </div>
-//   <div id="container-2">
-//     <select class="input" id = "input-dropdown">
-//       <option> Priority </option>
-//       <option> A ~ ASAP </option>
-//       <option> B ~ this week </option>
-//       <option> C ~ 4 fun </option>
-//     </select>
-//     <button id="add-task-button">Lets go</button>
-//   </div>
-// </div> `
+function createCheckbox(labelName, name){
+  let label = document.createElement('label');
+  label.for = name;
+  label.innerText = labelName;
+  let input = document.createElement('input');
+  input.name = name;
+  input.className = 'input';
+  input.type = 'checkbox';
+  input.setAttribute(`value`, 1);
+  return createFieldWrapper(name, 'inputdiv', label, input);
+}
