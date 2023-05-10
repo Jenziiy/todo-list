@@ -41,16 +41,19 @@ export function createForm(){
   containerSelectFields.id = 'form-selectfields';
   let containerButtons = document.createElement('div');
   containerButtons.id = 'form-configfields';
+
+  let button = document.createElement('button');
+  button.id = 'add-task-button';
+  button.innerText = 'add task';
+  
   containerInputFields.appendChild(createFormInput('Task: ', 'What you gonna do?', 'task'));
   containerInputFields.appendChild(createFormInput('Description: ', 'pLz eLaBoRaTe?', 'description'));
   containerSelectFields.appendChild(createFormDate('Due date: ','date'));
   containerSelectFields.appendChild(createSelectOptions('input-dropdown', 'select','Select: ', 'priority', configuration.priorityArray, 'inputdiv'));
   containerButtons.appendChild(createSelectOptions('project-dropdown', 'select','Select: ', 'project', configuration.projectCollection, 'projectdiv'));
-  containerButtons.appendChild(createCheckbox(button));
+  containerButtons.appendChild(button);
 
-  let button = document.createElement('button');
-  button.id = 'add-task-button';
-  button.innerText = 'add task';
+
   form.appendChild(containerInputFields);
   form.appendChild(containerSelectFields);
   form.appendChild(containerButtons);
@@ -100,7 +103,7 @@ function createSelectOptions(id, className, labelName, name, options, wrapperFie
   select.className = className;
   label.for = name;
   label.innerText = labelName;
-  const values = options;
+  const values = configuration.priorityArray;
   for (const val of values) {
     let option = document.createElement('option');
     option.value = val;
