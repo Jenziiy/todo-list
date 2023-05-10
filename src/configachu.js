@@ -1,9 +1,13 @@
 export const configuration = {
   priorityArray: ["Priority", "A - ASAP", "B - This week", "C - 4 fun"],
-  projectCollection: ["default"],
+  projectCollection: ["Projects"],
 
-  get projectCollection(){
-
+  get priorities(){
+    return this.priorityArray;
+  },
+  get projects(){
+    return this.projectCollection;
   }
 
 }
+
