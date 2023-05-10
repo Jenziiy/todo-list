@@ -1,5 +1,7 @@
 import { buttonLogic, el } from "./util";
 import { ToDoItem } from "./ToDoItem";
+import { configuration, priorityValues } from "./configachu";
+
 
 const date = new Date().toLocaleDateString('en-CA');
 
@@ -95,7 +97,7 @@ function createSelectOptions(labelName, name){
   select.className = 'input';
   label.for = name;
   label.innerText = labelName;
-  const values = ["Priority", "A - ASAP", "B - This week", "C - 4 fun"];
+  const values = configuration.priorityArray;
   for (const val of values) {
     let option = document.createElement('option');
     option.value = val;
