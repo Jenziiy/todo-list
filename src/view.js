@@ -39,18 +39,21 @@ export function createForm(){
   containerInputFields.id = 'form-inputfields';
   let containerSelectFields = document.createElement('div');
   containerSelectFields.id = 'form-selectfields';
+  let containerButtons = document.createElement('div');
+  containerButtons.id = 'form-configfields';
   containerInputFields.appendChild(createFormInput('Task: ', 'What you gonna do?', 'task'));
   containerInputFields.appendChild(createFormInput('Description: ', 'pLz eLaBoRaTe?', 'description'));
   containerSelectFields.appendChild(createFormDate('Due date: ','date'));
-  containerSelectFields.appendChild(createSelectOptions('Select: ', 'priority'));
-  // containerSelectFields.appendChild(createCheckbox('Completed: ', 'checkbox'));
+  containerSelectFields.appendChild(createSelectOptions('input-dropdown', 'select','Select: ', 'priority', configuration.priorityArray, 'inputdiv'));
+  containerButtons.appendChild(createSelectOptions('project-dropdown', 'select','Select: ', 'project', configuration.projectCollection, 'projectdiv'));
+  containerButtons.appendChild(createCheckbox(button));
 
   let button = document.createElement('button');
   button.id = 'add-task-button';
   button.innerText = 'add task';
   form.appendChild(containerInputFields);
   form.appendChild(containerSelectFields);
-  form.appendChild(button);
+  form.appendChild(containerButtons);
   return form;
 };
 
@@ -89,21 +92,21 @@ function createFormDate(labelName, name){
 
 }
 
-function createSelectOptions(labelName, name){
+function createSelectOptions(id, className, labelName, name, options, wrapperFieldName){
   let label = document.createElement('label');
   let select = document.createElement('select');
   select.name = name;
-  select.id = 'input-dropdown';
-  select.className = 'input';
+  select.id = id;
+  select.className = className;
   label.for = name;
   label.innerText = labelName;
-  const values = configuration.priorityArray;
+  const values = options;
   for (const val of values) {
     let option = document.createElement('option');
     option.value = val;
     option.text = val.charAt(0).toUpperCase() + val.slice(1);
     select.appendChild(option); }
-    return createFieldWrapper(name, 'inputdiv', label, select);
+    return createFieldWrapper(name, wrapperFieldName, label, select);
 
 }
 
