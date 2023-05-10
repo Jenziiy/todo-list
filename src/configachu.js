@@ -7,6 +7,10 @@ export const configuration = {
   },
   get projects(){
     return this.projectCollection;
+  },
+
+  set project(project){
+    this.projectCollection.push(project);
   }
 
 }
