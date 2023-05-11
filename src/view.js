@@ -130,3 +130,4 @@ function createItemContainer(){
   itemContainer.id = 'item-container';
   document.getElementsByTagName('main')[0].appendChild(itemContainer);
 }
+// add a new textbox so we can add a new proj
