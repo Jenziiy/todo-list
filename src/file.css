@@ -133,3 +133,8 @@ main{
     grid-template-columns: 1fr;
   }
 }
+
+#form-configfields{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+}
