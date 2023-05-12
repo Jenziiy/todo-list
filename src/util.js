@@ -1,3 +1,5 @@
+import { ToDoItem } from "./Models/TaskListModel";
+
 export function el(id) { return document.getElementById(id); }
 
 export function getInputColl(...args) {
@@ -13,3 +15,4 @@ export function getInputColl(...args) {
                                     getInputColl('0', '1', '2', '3')))
                                     .createUI()  })};
 
+ 
