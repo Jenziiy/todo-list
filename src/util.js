@@ -15,4 +15,10 @@ export function getInputColl(...args) {
                                     getInputColl('0', '1', '2', '3')))
                                     .createUI()  })};
 
- 
+                                    
+ export function createDateFormat(dueDate){
+  if (dueDate != undefined) { 
+    dueDate.toString().split('-'); 
+    return `${dateArr[2]}-${dateArr[1]}-${dateArr[0]}`; 
+         }
+      }
