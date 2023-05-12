@@ -1,5 +1,4 @@
 import { buttonLogic, el } from "./util";
-import { ToDoItem } from "./Models/TaskListModel";
 import { configuration, priorityValues } from "./configachu";
 
 
