@@ -1,8 +1,34 @@
 export class Model{
 
   constructor(){
-    
+
   }
+}
+
+export class TaskListModel{
+
+  constructor(){
+  this.itemList = [];
+  }
+
+  addItem(title, description, dueDate, priority){
+    const item = {
+      Project: 'default',
+      id: this.items.length > 0 ? id = this.items[this.items.length--].id++ : 1,
+      title: title,
+      description: description,
+      dueDate: createDateFormat(dueDate),
+      priority: priority,
+      completed: false,
+    }
+  }
+
+    createDateFormat(dueDate){
+      if (dueDate != undefined) { 
+        dueDate.toString().split('-'); 
+        return `${dateArr[2]}-${dateArr[1]}-${dateArr[0]}`; 
+        }
+    }
 }
 
 export class ToDoItem {

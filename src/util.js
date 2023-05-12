@@ -1,4 +1,4 @@
-sexport function el(id) { return document.getElementById(id); }
+export function el(id) { return document.getElementById(id); }
 
 export function getInputColl(...args) {
   const valueArr = [];
