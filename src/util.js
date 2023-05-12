@@ -18,7 +18,7 @@ export function getInputColl(...args) {
 
  export function createDateFormat(dueDate){
   if (dueDate != undefined) { 
-    dueDate.toString().split('-'); 
+    const dateArr = dueDate.toString().split('-'); 
     return `${dateArr[2]}-${dateArr[1]}-${dateArr[0]}`; 
          }
       }

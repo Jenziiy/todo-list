@@ -13,18 +13,30 @@ export class TaskListModel{
   this.itemList = [];
   }
 
-  addItem(title, description, dueDate, priority, project){
+  addItem({title: title, description: description, dueDate: dueDate, priority: priority, project: project} = {}){
     const item = {
-      Project: 'default',
-      id: this.items.length > 0 ? id = this.items[this.items.length--].id++ : 1,
+      Project: project ?? 'default',
+      id: this.itemList.length > 0 ? id = this.items[this.items.length--].id++ : 1,
       title: title,
       description: description,
       dueDate: createDateFormat(dueDate),
       priority: priority,
       completed: false,
     }
+    this.itemList.push(item);
   }
 
+  updateItem(id, {title: title, description: description, dueDate: dueDate, priority: priority, project: project, completed: completed} = {}){
+      this.itemList = this.itemList.map(((item)=> {
+        item.id === id ?? {id: item.id, title: title, description: description, dueDate: dueDate, priority: priority, project: project, completed: completed}
+        }
+      )
+    )
+  }
+
+  deleteItem(id){
+    this.itemList = this.itemList.filter((item) => item.id !== item);
+  }
 
 }
 
@@ -51,9 +63,7 @@ export class ToDoItem {
     <p> ${this.title ? this.title : 'Missing title'} </p>
     <p>${this.description ? this.description : 'Missing description'}</p>
     <p>${ this.createDateFormat()} </p>
-    <p>${this.priority[0] == 'A' ||
-         this.priority[0] == 'B' ||
-         this.priority[0] == 'C' ? this.priority : 'Missing priority'}</p>
+    <p>${this.priority[0] ?? 'Missing priority'}</p>
     <p> Completed <input type="checkbox" id="complete" name="complete" unchecked> </p> `
     document.getElementById('item-container').appendChild(div);
   }
