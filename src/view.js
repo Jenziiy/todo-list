@@ -17,6 +17,13 @@ export function createPage(){
   buttonLogic();
   createItemContainer();
 }
+export class View(){
+
+  constructor(){
+    
+  }
+}
+
 
 export function createPageStructure(){
   for ( const prop in htmlPageStructure ) {

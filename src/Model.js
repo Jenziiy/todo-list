@@ -1,3 +1,10 @@
+export class Model{
+
+  constructor(){
+    
+  }
+}
+
 export class ToDoItem {
 
   constructor(title, description, dueDate, priority) {
