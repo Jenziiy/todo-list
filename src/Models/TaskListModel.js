@@ -1,3 +1,5 @@
+import { createDateFormat } from "../util";
+
 export class Model{
 
   constructor(){
@@ -11,7 +13,7 @@ export class TaskListModel{
   this.itemList = [];
   }
 
-  addItem(title, description, dueDate, priority){
+  addItem(title, description, dueDate, priority, project){
     const item = {
       Project: 'default',
       id: this.items.length > 0 ? id = this.items[this.items.length--].id++ : 1,
@@ -23,12 +25,7 @@ export class TaskListModel{
     }
   }
 
-    createDateFormat(dueDate){
-      if (dueDate != undefined) { 
-        dueDate.toString().split('-'); 
-        return `${dateArr[2]}-${dateArr[1]}-${dateArr[0]}`; 
-        }
-    }
+
 }
 
 export class ToDoItem {
