@@ -17,10 +17,10 @@ export function createPage(){
   buttonLogic();
   createItemContainer();
 }
-export class View(){
+export class View{
 
   constructor(){
-    
+
   }
 }
 
