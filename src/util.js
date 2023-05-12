@@ -1,6 +1,4 @@
-import { ToDoItem } from "./Model";
-
-export function el(id) { return document.getElementById(id); }
+sexport function el(id) { return document.getElementById(id); }
 
 export function getInputColl(...args) {
   const valueArr = [];
