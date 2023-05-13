@@ -13,7 +13,7 @@ export function getInputColl(...args) {
   export function buttonLogic(){
     return el('add-task-button').addEventListener('click', () => { new ToDoItem(...(
                                     getInputColl('0', '1', '2', '3')))
-                                    .createUI()  })};
+                                    .showToDoItem()  })};
 
 
  export function createDateFormat(dueDate){

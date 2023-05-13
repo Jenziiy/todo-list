@@ -43,10 +43,10 @@ export class TaskListModel{
 export class ToDoItem {
 
   constructor(title, description, dueDate, priority) {
-    this.title = title ? title : 'Missing title';
-    this.description = description ? description : 'Missing description';
+    this.title = title ?? 'Missing title';
+    this.description = description ?? 'Missing description';
     this.dueDate = dueDate;
-    this.priority = priority ? priority : 'A';
+    this.priority = priority ?? 'A';
   }
 
   createDateFormat(){
@@ -56,14 +56,14 @@ export class ToDoItem {
       }
   }
 
-  createUI(){
+  showToDoItem(){
     const div = document.createElement('div');
     div.id = 'todo-item';
     div.innerHTML = `
     <p> ${this.title ? this.title : 'Missing title'} </p>
     <p>${this.description ? this.description : 'Missing description'}</p>
     <p>${ this.createDateFormat()} </p>
-    <p>${this.priority[0] ?? 'Missing priority'}</p>
+    <p>${this.priority ?? 'Missing priority'}</p>
     <p> Completed <input type="checkbox" id="complete" name="complete" unchecked> </p> `
     document.getElementById('item-container').appendChild(div);
   }

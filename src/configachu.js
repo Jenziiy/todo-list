@@ -1,6 +1,6 @@
 export const configuration = {
   
-  priorityArray: ["Priority", "A - ASAP", "B - This week", "C - 4 fun"],
+  priorityArray: [" ", "A - ASAP", "B - This week", "C - 4 fun"],
   projectCollection: ["Projects"],
 
   get priorities(){
