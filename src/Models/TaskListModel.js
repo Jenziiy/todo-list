@@ -15,8 +15,8 @@ export class TaskListModel{
 
   addItem({title: title, description: description, dueDate: dueDate, priority: priority, project: project} = {}){
     const item = {
-      Project: project ?? 'default',
       id: this.itemList.length > 0 ? id = this.items[this.items.length--].id++ : 1,
+      Project: project ?? 'default',
       title: title,
       description: description,
       dueDate: createDateFormat(dueDate),
@@ -28,10 +28,11 @@ export class TaskListModel{
 
   updateItem(id, {title: title, description: description, dueDate: dueDate, priority: priority, project: project, completed: completed} = {}){
       this.itemList = this.itemList.map(((item)=> {
-        item.id === id ?? {id: item.id, title: title, description: description, dueDate: dueDate, priority: priority, project: project, completed: completed}
+        item.id === id ?? {id: item.id, title: title ?? item.title, description: description ?? item.description, dueDate: dueDate ?? item.dueDate, priority: priority ?? item.priority, project: project ?? item.project, completed: completed ?? item.completed}
         }
       )
     )
+    console.log(this);
   }
 
   deleteItem(id){

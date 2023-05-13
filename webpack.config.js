@@ -13,9 +13,10 @@ module.exports = {
     }),
   ],
   output: {
-    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'images/[hash][ext][query]',
+    filename: '[name].js',
+    library: 'MyLibrary',
     clean: true,
   },
   module: {
