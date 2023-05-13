@@ -61,6 +61,7 @@ export class ToDoItem {
       }
   }
 
+  // remove view logic from model
   showToDoItem(){
     const div = document.createElement('div');
     div.id = 'todo-item';
