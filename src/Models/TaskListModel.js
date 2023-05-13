@@ -13,10 +13,10 @@ export class TaskListModel{
   this.itemList = [];
   }
 
-  addItem({title: title, description: description, dueDate: dueDate, priority: priority, project: project} = {}){
+  addItem({title: title, description: description, dueDate: dueDate, priority: priority, project: project}){
     const item = {
-      id: this.itemList.length > 0 ? id = this.items[this.items.length--].id++ : 1,
-      Project: project ?? 'default',
+      id: this.itemList.length > 0 ? this.itemList[this.itemList.length - 1].id + 1 : 1,
+      project: project ?? 'default',
       title: title,
       description: description,
       dueDate: createDateFormat(dueDate),
@@ -27,16 +27,20 @@ export class TaskListModel{
   }
 
   updateItem(id, {title: title, description: description, dueDate: dueDate, priority: priority, project: project, completed: completed} = {}){
-      this.itemList = this.itemList.map(((item)=> {
-        item.id === id ?? {id: item.id, title: title ?? item.title, description: description ?? item.description, dueDate: dueDate ?? item.dueDate, priority: priority ?? item.priority, project: project ?? item.project, completed: completed ?? item.completed}
-        }
+      this.itemList = this.itemList.map((item)=> 
+        item.id === id ? {id: item.id, project: project ?? item.project, title: title ?? item.title,  description: description ?? item.description,
+           dueDate: dueDate ?? item.dueDate, priority: priority ?? item.priority, completed: completed ?? item.completed} : item,
       )
-    )
-    console.log(this);
+      
+    return this.itemList;
   }
 
   deleteItem(id){
     this.itemList = this.itemList.filter((item) => item.id !== item);
+  }
+
+  readItemList(){
+    return this.itemList;
   }
 
 }
