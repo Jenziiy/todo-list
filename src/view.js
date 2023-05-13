@@ -56,7 +56,7 @@ export function createForm(){
   containerInputFields.appendChild(createFormInput('Description: ', 'pLz eLaBoRaTe?', 'description'));
   containerSelectFields.appendChild(createFormDate('Due date: ','date'));
   containerSelectFields.appendChild(createSelectOptions('input-dropdown', 'input','Priority: ', 'priority', configuration.priorities, 'inputdiv'));
-  containerButtons.appendChild(createSelectOptions('project-dropdown', 'input','Project: ', '', configuration.projects, 'projectdiv'));
+  containerButtons.appendChild(createSelectOptions('project-dropdown', 'input','Project: ', 'project', configuration.projects, 'projectdiv'));
   containerButtons.appendChild(button);
 
 
