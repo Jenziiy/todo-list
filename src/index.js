@@ -1,12 +1,13 @@
 import css from "./file.css";
 import { createPage, View } from "./view";
 import { Controller } from "./Controller";
-import { TaskListModel } from "./Models/TaskListModel";
+import itemListModel from "./Models/TaskListModel";
+
 
 function component() {
    createPage();
 }
 
-export const app = new Controller(new TaskListModel(), new View());
+export const app = new Controller(itemListModel, new View());
  
 component();

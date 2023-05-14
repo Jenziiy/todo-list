@@ -1,13 +1,7 @@
 import { createDateFormat } from "../util";
 
-export class Model{
 
-  constructor(){
-
-  }
-}
-
-export class TaskListModel{
+class TaskListModel{
 
   constructor(){
   this.itemList = [];
@@ -74,3 +68,5 @@ export class ToDoItem {
     document.getElementById('item-container').appendChild(div);
   }
 }
+
+export default new TaskListModel();
