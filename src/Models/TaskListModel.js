@@ -33,6 +33,12 @@ class TaskListModel{
     this.itemList = this.itemList.filter((item) => item.id !== item);
   }
 
+  toggleComplete(id){
+    this.itemList = this.itemList.map((item) => item.id === id ?
+      item.completed = !item.completed : item, )
+      return this.itemList;
+  }
+
   readItemList(){
     return this.itemList;
   }
