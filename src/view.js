@@ -1,5 +1,5 @@
 import { buttonLogic, el } from "./util";
-import { configuration } from "./configachu";
+import { configuration } from "./config";
 
 
 const date = new Date().toLocaleDateString('en-CA');
