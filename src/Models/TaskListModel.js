@@ -28,14 +28,22 @@ class TaskListModel{
       
     return this.itemList;
   }
+  //updateItem(id, {title: title, description: description, dueDate: dueDate, priority: priority, project: project}){
+    //this.itemList[this.itemList.findIndex((item) => item.id === id)].key = description;}
 
   deleteItem(id){
     this.itemList = this.itemList.filter((item) => item.id !== item);
   }
 
   toggleComplete(id){
-    this.itemList = this.itemList.map((item) => item.id === id ?
-      item.completed = !item.completed : item, )
+    this.itemList = this.itemList.map((item) => 
+    { if(item.id === id ){
+       item = item; item.completed = !item.completed
+      return item; }
+      else {
+        return item = item
+      }
+    })
       return this.itemList;
   }
 
