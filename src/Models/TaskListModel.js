@@ -94,3 +94,5 @@ export class ToDoItem {
 }
 
 export default new TaskListModel();
+
+// create link between other projects array and creating new objects/ updating existing project objects
