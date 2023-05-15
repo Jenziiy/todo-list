@@ -53,9 +53,12 @@ class TaskListModel{
 
   isProjectDefault(){
     let otherProjectsArr =  []
-    this.itemList.forEach((item) => { if (item.project != 'default')
-        otherProjectsArr.push(item) 
-      })
+    for(let i = 0; i < this.itemList.length; i++){ 
+      if (this.itemList[i].project != 'default'){
+        otherProjectsArr.push(this.itemList[i]);
+        this.itemList.splice(i, 1);
+        i--
+      }}
       return otherProjectsArr;
     }
 }
