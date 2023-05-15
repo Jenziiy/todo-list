@@ -51,11 +51,12 @@ class TaskListModel{
     return this.itemList;
   }
 
-  // isProjectDefault(project){
-  //    this.itemList.forEach((item) => item[project] != 'default'){
-  //       this.itemList;
-  //   }
-  // } 
+  isProjectDefault(project){
+    let otherProjectsArr =  []
+    this.itemList.forEach((item) => item.project != 'default'){
+        otherProjectsArr.push(item);
+    }
+  } 
 
 }
 
