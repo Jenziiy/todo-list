@@ -5,6 +5,7 @@ class TaskListModel{
 
   constructor(){
   this.itemList = [];
+  this.otherProjectsArr =  [];
   }
 
   addItem({title: title, description: description, dueDate: dueDate, priority: priority, project: project}){
@@ -52,7 +53,6 @@ class TaskListModel{
   }
 
   isProjectDefault(){
-    let otherProjectsArr =  []
     for(let i = 0; i < this.itemList.length; i++){ 
       if (this.itemList[i].project != 'default'){
         otherProjectsArr.push(this.itemList[i]);
