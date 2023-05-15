@@ -51,13 +51,13 @@ class TaskListModel{
     return this.itemList;
   }
 
-  isProjectDefault(project){
+  isProjectDefault(){
     let otherProjectsArr =  []
-    this.itemList.forEach((item) => item.project != 'default')
-        otherProjectsArr.push(item);
-    
-  } 
-
+    this.itemList.forEach((item) => { if (item.project != 'default')
+        otherProjectsArr.push(item) 
+      })
+      return otherProjectsArr;
+    }
 }
 
 export class ToDoItem {
