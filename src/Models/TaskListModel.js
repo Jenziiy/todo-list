@@ -37,12 +37,12 @@ class TaskListModel{
   }
 
   toggleComplete(id){
-    this.itemList = this.itemList.map((item) => 
-    { if(item.id === id ){
+    this.itemList = this.itemList.map((item) => { 
+      if (item.id === id) {
        item = item; item.completed = !item.completed
       return item; }
       else {
-        return item = item
+        return item = item;
       }
     })
       return this.itemList;
@@ -58,7 +58,8 @@ class TaskListModel{
         this.otherProjectsArr.push(this.itemList[i]);
         this.itemList.splice(i, 1);
         i--
-      }}
+      }
+    }
       return this.otherProjectsArr;
     }
 }
