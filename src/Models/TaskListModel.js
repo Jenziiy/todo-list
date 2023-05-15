@@ -53,9 +53,9 @@ class TaskListModel{
 
   isProjectDefault(project){
     let otherProjectsArr =  []
-    this.itemList.forEach((item) => item.project != 'default'){
+    this.itemList.forEach((item) => item.project != 'default')
         otherProjectsArr.push(item);
-    }
+    
   } 
 
 }
