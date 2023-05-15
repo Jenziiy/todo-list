@@ -51,6 +51,12 @@ class TaskListModel{
     return this.itemList;
   }
 
+  // isProjectDefault(project){
+  //    this.itemList.forEach((item) => item[project] != 'default'){
+  //       this.itemList;
+  //   }
+  // } 
+
 }
 
 export class ToDoItem {
