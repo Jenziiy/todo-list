@@ -19,7 +19,8 @@ class TaskListModel{
       completed: false,
     }
     this.itemList.push(item);
-  }
+    return item;
+  } 
 
   updateItem(id, {title: title, description: description, dueDate: dueDate, priority: priority, project: project, completed: completed} = {}){
       this.itemList = this.itemList.map((item)=> 

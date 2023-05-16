@@ -137,3 +137,19 @@ function createItemContainer(){
   document.getElementsByTagName('main')[0].appendChild(itemContainer);
 }
 // add a new textbox so we can add a new proj
+
+function buildItemView(item){
+  const div = document.createElement('div');
+  document.getElementById('item-container').appendChild(div);
+  const paragraphBuilder = (item) => {
+    for (const prop in item) {
+      if (item.hasOwnProperty.call(item, prop)) {
+        const itemValue = object[key];
+        const paragraph =   document.createElement('p');
+        paragraph.classList = 'todo-line';
+        paragraph.innerText = itemValue;
+      }
+      div.appendChild(paragraph);
+    }
+  }
+}
