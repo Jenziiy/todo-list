@@ -138,7 +138,7 @@ function createItemContainer(){
 }
 // add a new textbox so we can add a new proj
 
-function buildItemView(item){
+export function buildItemView(item){
   const div = document.createElement('div');
   document.getElementById('item-container').appendChild(div);
   const paragraphBuilder = (item) => {

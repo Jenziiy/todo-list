@@ -1,4 +1,4 @@
-import { ToDoItem } from "./Models/TaskListModel";
+import ToDoItem from "./Models/TaskListModel";
 
 export function el(id) { return document.getElementById(id); }
 
