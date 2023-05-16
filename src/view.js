@@ -15,7 +15,7 @@ class View {
 
     createPage(){
       this.createPageStructure();
-      el('main-wrapper').appendChild(createForm());
+      el('main-wrapper').appendChild(this.createForm());
       buttonLogic();
       this.createItemContainer();
     }
@@ -48,11 +48,11 @@ class View {
     button.id = 'add-task-button';
     button.innerText = 'add task';
     
-    containerInputFields.appendChild(createFormInput('Task: ', 'What you gonna do?', 'task'));
-    containerInputFields.appendChild(createFormInput('Description: ', 'pLz eLaBoRaTe?', 'description'));
-    containerSelectFields.appendChild(createFormDate('Due date: ','date'));
-    containerSelectFields.appendChild(createSelectOptions('input-dropdown', 'input','Priority: ', 'priority', configuration.priorities, 'inputdiv'));
-    containerButtons.appendChild(createSelectOptions('project-dropdown', 'input','Project: ', 'project', configuration.projects, 'projectdiv'));
+    containerInputFields.appendChild(this.createFormInput('Task: ', 'What you gonna do?', 'task'));
+    containerInputFields.appendChild(this.createFormInput('Description: ', 'pLz eLaBoRaTe?', 'description'));
+    containerSelectFields.appendChild(this.createFormDate('Due date: ','date'));
+    containerSelectFields.appendChild(this.createSelectOptions('input-dropdown', 'input','Priority: ', 'priority', configuration.priorities, 'inputdiv'));
+    containerButtons.appendChild(this.createSelectOptions('project-dropdown', 'input','Project: ', 'project', configuration.projects, 'projectdiv'));
     containerButtons.appendChild(button);
 
 
@@ -81,7 +81,7 @@ class View {
     input.name = name;
     input.type = 'text';
     input.setAttribute(`placeholder`, placeholder);
-    return createFieldWrapper(name, 'inputdiv', label, input);
+    return this.createFieldWrapper(name, 'inputdiv', label, input);
   }
 
     createFormDate(labelName, name){
@@ -92,8 +92,8 @@ class View {
     input.name = name;
     input.className = 'input';
     input.type = 'date';
-    input.setAttribute(`value`, date);
-    return createFieldWrapper(name, 'inputdiv', label, input);
+    input.setAttribute(`value`, this.date);
+    return this.createFieldWrapper(name, 'inputdiv', label, input);
 
   }
 
@@ -111,7 +111,7 @@ class View {
       option.value = val;
       option.text = val.charAt(0).toUpperCase() + val.slice(1);
       select.appendChild(option); }
-      return createFieldWrapper(name, wrapperFieldName, label, select);
+      return this.createFieldWrapper(name, wrapperFieldName, label, select);
 
   }
 
@@ -124,7 +124,7 @@ class View {
     input.className = 'input';
     input.type = 'checkbox';
     input.setAttribute(`value`, 1);
-    return createFieldWrapper(name, 'inputdiv', label, input);
+    return this.createFieldWrapper(name, 'inputdiv', label, input);
   }
 
     createItemContainer(){
