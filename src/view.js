@@ -14,20 +14,20 @@ class View {
     };
 
     createPage(){
-      createPageStructure();
+      this.createPageStructure();
       el('main-wrapper').appendChild(createForm());
       buttonLogic();
-      createItemContainer();
+      this.createItemContainer();
     }
 
     createPageStructure(){
-    for ( const prop in htmlPageStructure ) {
-      let element = htmlPageStructure[prop];
+    for ( const prop in this.htmlPageStructure ) {
+      let element = this.htmlPageStructure[prop];
       element.classList.add('page-sections');
       document.body.appendChild(element);
-    let childWrapper = document.createElement('div');
-    childWrapper.setAttribute(`id`, `${prop}-wrapper`);
-    element.appendChild(childWrapper);
+      let childWrapper = document.createElement('div');
+      childWrapper.setAttribute(`id`, `${prop}-wrapper`);
+      element.appendChild(childWrapper);
     }
   }
 
