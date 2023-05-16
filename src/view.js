@@ -1,7 +1,7 @@
 import { buttonLogic, el } from "./util";
 import { configuration } from "./config";
 
-export class View {
+class View {
 
     constructor(){};
 
@@ -150,3 +150,5 @@ export class View {
     }
   }
 }
+
+export default new View();
