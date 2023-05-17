@@ -3,7 +3,7 @@ import { configuration } from "./config";
 
 class View {
 
-    constructor(){};
+    constructor()
 
     date = new Date().toLocaleDateString('en-CA');
 
