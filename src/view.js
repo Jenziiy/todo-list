@@ -2,16 +2,16 @@ import { buttonLogic, el } from "./util";
 import { configuration } from "./config";
 
 class View {
+  date = new Date().toLocaleDateString('en-CA');
 
     constructor()
 
-    date = new Date().toLocaleDateString('en-CA');
-
+    
     htmlPageStructure = {
       header: document.createElement('header'),
       main:  document.createElement('main'),
       footer: document.createElement('footer'),
-    };
+    }
 
     createPage(){
       this.createPageStructure();
