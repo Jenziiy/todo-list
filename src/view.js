@@ -6,7 +6,7 @@ class View {
 
     constructor()
 
-    
+
     htmlPageStructure = {
       header: document.createElement('header'),
       main:  document.createElement('main'),
@@ -32,10 +32,9 @@ class View {
   }
 
     createForm(){
-    // let form = document.createElement('form');
+     let form = document.createElement('form');
       // form.setAttribute("method","post");
     // form.setAttribute("action", "submit");
-    let form = document.createElement('div');
     form.id = 'add-task';
     let containerInputFields = document.createElement('div');
     containerInputFields.id = 'form-inputfields';
@@ -45,14 +44,15 @@ class View {
     containerButtons.id = 'form-configfields';
 
     let button = document.createElement('button');
+    button.type = 'button';
     button.id = 'add-task-button';
     button.innerText = 'add task';
     
-    containerInputFields.appendChild(this.createFormInput('Task: ', 'create new task', 'task'));
-    containerInputFields.appendChild(this.createFormInput('Description: ', 'add description', 'description'));
+    containerInputFields.appendChild(this.createFormInput('Task: ', 'create new task', 'task', 'reset'));
+    containerInputFields.appendChild(this.createFormInput('Description: ', 'add description', 'description', 'reset'));
     containerSelectFields.appendChild(this.createFormDate('Due date: ','date'));
     containerSelectFields.appendChild(this.createSelectOptions('input-dropdown', 'input','Priority: ', 'priority', configuration.priorities, 'inputdiv'));
-    containerButtons.appendChild(this.createSelectOptions('project-dropdown', 'input','Project: ', 'project', configuration.projects, 'projectdiv'));
+    containerButtons.appendChild(this.createSelectOptions('project-dropdown', 'input','Project: ', 'project', 'reset', configuration.projects, 'projectdiv'));
     containerButtons.appendChild(button);
 
 
@@ -71,13 +71,13 @@ class View {
     return div;
   }
 
-    createFormInput(labelName, placeholder, name){
-    
+    createFormInput(labelName, placeholder, name, resetClass){
     let label = document.createElement('label');
     label.for = name;
     label.innerText = labelName;
     let input = document.createElement('input');
     input.className = 'input';
+    resetClass ? input.classList.add = resetClass : input.className ;
     input.name = name;
     input.type = 'text';
     input.setAttribute(`placeholder`, placeholder);

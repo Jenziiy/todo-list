@@ -15,7 +15,10 @@ export function getInputColl(...args) {
     let res;
     return el('add-task-button').addEventListener('click', () => { taskListModel.addItem(...(
                                     (res = getInputColl('0', '1', '2', '3', '4'))));
-                                    view.buildItemView(res)})};
+                                    view.buildItemView(res);
+                                  Array.from(document.getElementsByClassName('reset')).forEach(element => {
+                                    element.innerText = '';
+                                  });})};
 
 
  export function createDateFormat(dueDate){
