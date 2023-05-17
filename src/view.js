@@ -138,8 +138,9 @@ class View {
     const div = document.createElement('div');
     document.getElementById('item-container').appendChild(div);
     const paragraphBuilder = (item) => {
-      for (const prop in item) {
-        if (item.hasOwnProperty.call(item, prop)) {
+      itemObj = Object.assign({}, item);
+      for (const prop in itemObj) {
+        if (itemObj.hasOwnProperty.call(itemObj, prop)) {
           const itemValue = object[key];
           const paragraph =   document.createElement('p');
           paragraph.classList = 'todo-line';

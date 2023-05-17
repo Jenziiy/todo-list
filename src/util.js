@@ -1,4 +1,5 @@
-import ToDoItem from "./Models/TaskListModel";
+import taskListModel from "./Models/ObjectModel";
+import view from "./view";
 
 export function el(id) { return document.getElementById(id); }
 
@@ -11,9 +12,10 @@ export function getInputColl(...args) {
  }
 
   export function buttonLogic(){
-    return el('add-task-button').addEventListener('click', () => { new ToDoItem(...(
-                                    getInputColl('0', '1', '2', '3')))
-                                    .showToDoItem()  })};
+    let res;
+    return el('add-task-button').addEventListener('click', () => { taskListModel.addItem(...(
+                                    (res = getInputColl('0', '1', '2', '3'))));
+                                    view.buildItemView(res)})};
 
 
  export function createDateFormat(dueDate){
