@@ -48,8 +48,8 @@ class View {
     button.id = 'add-task-button';
     button.innerText = 'add task';
     
-    containerInputFields.appendChild(this.createFormInput('Task: ', 'What you gonna do?', 'task'));
-    containerInputFields.appendChild(this.createFormInput('Description: ', 'pLz eLaBoRaTe?', 'description'));
+    containerInputFields.appendChild(this.createFormInput('Task: ', 'create new task', 'task'));
+    containerInputFields.appendChild(this.createFormInput('Description: ', 'add description', 'description'));
     containerSelectFields.appendChild(this.createFormDate('Due date: ','date'));
     containerSelectFields.appendChild(this.createSelectOptions('input-dropdown', 'input','Priority: ', 'priority', configuration.priorities, 'inputdiv'));
     containerButtons.appendChild(this.createSelectOptions('project-dropdown', 'input','Project: ', 'project', configuration.projects, 'projectdiv'));
