@@ -136,20 +136,25 @@ class View {
 
     buildItemView(item){
     const div = document.createElement('div');
+    div.id = 'todo-item';
     document.getElementById('item-container').appendChild(div);
-    const paragraphBuilder = (item) => {
-      itemObj = Object.assign({}, item);
-      for (const prop in itemObj) {
-        if (itemObj.hasOwnProperty.call(itemObj, prop)) {
-          const itemValue = object[key];
-          const paragraph =   document.createElement('p');
-          paragraph.classList = 'todo-line';
-          paragraph.innerText = itemValue;
-        }
-        div.appendChild(paragraph);
-      }
+    this.paragraphBuilder(item, div);
+    div.appendChild(this.createCheckbox('complete', 'complete'));
+}
+
+ paragraphBuilder(item, div) {
+  let itemObj = Object.assign({}, item);
+  for (const prop in itemObj) {
+    if (itemObj.hasOwnProperty.call(itemObj, prop)) {
+      const itemValue = itemObj[prop];
+      console.log(itemObj[prop])
+      const paragraph =   document.createElement('p');
+      paragraph.classList = 'todo-line';
+      paragraph.innerText = itemValue;
+      div.appendChild(paragraph);
     }
   }
+}
 }
 
 export default new View();

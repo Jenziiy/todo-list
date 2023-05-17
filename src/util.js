@@ -14,7 +14,7 @@ export function getInputColl(...args) {
   export function buttonLogic(){
     let res;
     return el('add-task-button').addEventListener('click', () => { taskListModel.addItem(...(
-                                    (res = getInputColl('0', '1', '2', '3'))));
+                                    (res = getInputColl('0', '1', '2', '3', '4'))));
                                     view.buildItemView(res)})};
 
 
