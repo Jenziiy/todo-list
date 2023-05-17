@@ -60,7 +60,7 @@ class View {
     form.appendChild(containerSelectFields);
     form.appendChild(containerButtons);
     return form;
-  };
+  }
 
     createFieldWrapper(id, className, label, field){
     let div = document.createElement('div');
@@ -138,23 +138,23 @@ class View {
     const div = document.createElement('div');
     div.id = 'todo-item';
     document.getElementById('item-container').appendChild(div);
-    this.paragraphBuilder(item, div);
+    this.createParagraph(item, div);
     div.appendChild(this.createCheckbox('complete', 'complete'));
 }
 
- paragraphBuilder(item, div) {
-  let itemObj = Object.assign({}, item);
-  for (const prop in itemObj) {
-    if (itemObj.hasOwnProperty.call(itemObj, prop)) {
-      const itemValue = itemObj[prop];
-      console.log(itemObj[prop])
-      const paragraph =   document.createElement('p');
-      paragraph.classList = 'todo-line';
-      paragraph.innerText = itemValue;
-      div.appendChild(paragraph);
+    createParagraph(item, div) {
+    let itemObj = Object.assign({}, item);
+    for (const prop in itemObj) {
+      if (itemObj.hasOwnProperty.call(itemObj, prop)) {
+        const itemValue = itemObj[prop];
+        console.log(itemObj[prop])
+        const paragraph =   document.createElement('p');
+        paragraph.classList = 'todo-line';
+        paragraph.innerText = itemValue;
+        div.appendChild(paragraph);
+      }
     }
-  }
-}
+    }
 }
 
 export default new View();
