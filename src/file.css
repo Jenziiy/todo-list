@@ -109,10 +109,10 @@ display: flex;
 justify-content: space-between;
 }
 
-#todo-item>p{
+#todo-item>p,
+#todo-item>div{
   padding: 6px 7px;
-  height: 28px;
-  
+  height: 28px;  
 }
 
 main{

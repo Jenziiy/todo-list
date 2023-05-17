@@ -121,10 +121,10 @@ class View {
     label.innerText = labelName;
     let input = document.createElement('input');
     input.name = name;
-    input.className = 'input';
+    input.className = 'todo-line';
     input.type = 'checkbox';
     input.setAttribute(`value`, 1);
-    return this.createFieldWrapper(name, 'inputdiv', label, input);
+    return this.createFieldWrapper(name, 'todo-line', label, input);
   }
 
     createItemContainer(){
