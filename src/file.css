@@ -138,3 +138,7 @@ main{
 display: grid;
 grid-column: span 2;
 }
+
+#project-input{
+  display: none;
+}
