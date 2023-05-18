@@ -166,6 +166,13 @@ class View {
     projectAddBtn.type = 'button';
     document.getElementById('project').appendChild(projectAddBtn);
   }
+
+  createProjectInputField(){
+    let projectInput = document.createElement('input');
+    projectInput.id = 'project-input';
+    projectInput.placeholder = 'new project';
+    document.getElementById('project').appendChild(projectInput);
+  }
 }
 
 export default new View();
