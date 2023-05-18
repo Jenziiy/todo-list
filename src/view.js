@@ -4,7 +4,7 @@ import { configuration } from "./config";
 class View {
   date = new Date().toLocaleDateString('en-CA');
 
-    constructor()
+    constructor(){}
 
 
     htmlPageStructure = {
@@ -52,7 +52,7 @@ class View {
     containerInputFields.appendChild(this.createFormInput('Description: ', 'add description', 'description', 'reset'));
     containerSelectFields.appendChild(this.createFormDate('Due date: ','date'));
     containerSelectFields.appendChild(this.createSelectOptions('input-dropdown', 'input','Priority: ', 'priority', configuration.priorities, 'inputdiv'));
-    containerButtons.appendChild(this.createSelectOptions('project-dropdown', 'input','Project: ', 'project', 'reset', configuration.projects, 'projectdiv'));
+    containerButtons.appendChild(this.createSelectOptions('project-dropdown', 'input','Project: ', 'project', configuration.projects, 'projectdiv'));
     containerButtons.appendChild(button);
 
 
@@ -76,8 +76,9 @@ class View {
     label.for = name;
     label.innerText = labelName;
     let input = document.createElement('input');
-    input.className = 'input';
-    resetClass ? input.classList.add = resetClass : input.className ;
+    input.classList.add('input');
+    console.log(input.classList);
+    input.classList.add(resetClass);
     input.name = name;
     input.type = 'text';
     input.setAttribute(`placeholder`, placeholder);

@@ -17,9 +17,8 @@ export function getInputColl(...args) {
                                     (res = getInputColl('0', '1', '2', '3', '4'))));
                                     view.buildItemView(res);
                                   Array.from(document.getElementsByClassName('reset')).forEach(element => {
-                                    element.innerText = '';
+                                    element.value = '';
                                   });})};
-
 
  export function createDateFormat(dueDate){
   if (dueDate != undefined) { 
