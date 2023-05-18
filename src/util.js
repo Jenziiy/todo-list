@@ -18,7 +18,10 @@ export function getInputColl(...args) {
                                     view.buildItemView(res);
                                   Array.from(document.getElementsByClassName('reset')).forEach(element => {
                                     element.value = '';
-                                  });})};
+                                  });
+                                   document.getElementById('project-dropdown').selectedIndex = 0;
+
+                                })};
 
  export function createDateFormat(dueDate){
   if (dueDate != undefined) { 
