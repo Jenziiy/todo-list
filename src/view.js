@@ -1,5 +1,8 @@
 import { addProjectLogic, buttonLogic, el } from "./util";
 import { configuration } from "./config";
+import { Controller } from "./Controller";
+import { ProjectModel } from "./Models/ProjectModel";
+import { app } from ".";
 
 class View {
   date = new Date().toLocaleDateString('en-CA');
@@ -55,7 +58,7 @@ class View {
     containerInputFields.appendChild(this.createFormInput('Description: ', 'add description', 'description', 'reset'));
     containerSelectFields.appendChild(this.createFormDate('Due date: ','date'));
     containerSelectFields.appendChild(this.createSelectOptions('input-dropdown', 'input','Priority: ', 'priority', configuration.priorities, 'inputdiv'));
-    containerButtons.appendChild(this.createSelectOptions('project-dropdown', 'input','Project: ', 'project', configuration.project, 'projectdiv'));
+    containerButtons.appendChild(this.createSelectOptions('project-dropdown', 'input','Project: ', 'project', app.getProjects(), 'projectdiv'));
     containerButtons.appendChild(button);
 
 

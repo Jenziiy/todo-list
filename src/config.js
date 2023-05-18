@@ -8,17 +8,7 @@ export const configuration = {
   get priorities(){
     return this.priorityArray;
   },
-  get project(){
-    return this.projectCollection;
-  },
-
-  setProject(project){
-    if(project != '' && this.projectCollection.find(element => element != project)){
-    this.projectCollection.push(project);
-        view.addSelectOptions([project])
-    }
-    return this.projectCollection;
-  }
+ 
 
 }
 

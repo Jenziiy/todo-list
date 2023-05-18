@@ -1,4 +1,6 @@
+import { app } from ".";
 import taskListModel from "./Models/ObjectModel";
+import { ProjectModel } from "./Models/ProjectModel";
 import { configuration } from "./config";
 import view from "./view";
 
@@ -31,12 +33,12 @@ export function getInputColl(...args) {
          }
       }
 export function addProjectLogic(){
-  document.getElementById('project-button').addEventListener('click', () => {taskListModel.addProject('hello');
+  document.getElementById('project-button').addEventListener('click', () => {
   const projectInput = document.getElementById('project-input');
   const selectOption = document.createElement('option');
   selectOption.innerText = projectInput.value;
   projectInput.value ?? document.getElementById('project-dropdown').add(selectOption),
-  configuration.setProject(projectInput.value),
+  app.model.setProject(projectInput.value),
   projectInput.value = '';
   projectInput.style.display == 'none' ? projectInput.style.display = 'block' : projectInput.style.display = 'none';
   })

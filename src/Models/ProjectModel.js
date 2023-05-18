@@ -1,14 +1,20 @@
-export class ProjectModel{
-  projects = [];
+import view from "../view";
 
+export class ProjectModel{
+  projects = ['default'];
   constructor(){
-      
-      // add itemlist to a project file
+    
     }
 
-  addProject(projectName){
-    console.log('clicked')
-   this.projects.push(projectName);
-    return this.projects;
+    get project(){
+      return this.projects;
+    }
+  
+    setProject(project){
+      if(project != '' && this.projects.find(element => element != project)){
+      this.projects.push(project);
+          view.addSelectOptions([project])
+      }
+      return this.projects;
     }
 }
