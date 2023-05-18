@@ -20,6 +20,7 @@ class View {
       this.addProjectButton();
       addProjectLogic();
       this.createItemContainer();
+      this.createProjectInputField();
     }
 
     createPageStructure(){
