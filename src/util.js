@@ -29,3 +29,7 @@ export function getInputColl(...args) {
     return `${dateArr[2]}-${dateArr[1]}-${dateArr[0]}`; 
          }
       }
+export function addProjectLogic(){
+document.getElementById('project-button').addEventListener('click', () => {taskListModel.addProject('hello')})
+
+}

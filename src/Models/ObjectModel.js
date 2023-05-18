@@ -1,9 +1,11 @@
 import { createDateFormat } from "../util";
+import { ProjectModel } from "./ProjectModel";
 
 
-class TaskListModel{
+class TaskListModel extends ProjectModel{
 
   constructor(){
+    super()
   this.itemList = [];
   this.otherProjectsArr =  [];
   }

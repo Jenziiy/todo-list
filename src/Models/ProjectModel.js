@@ -1,13 +1,14 @@
-class ProjectModel{
+export class ProjectModel{
+  projects = [];
 
-  constructor(itemList){
-      projects = [];
+  constructor(){
+      
       // add itemlist to a project file
     }
 
   addProject(projectName){
-    !projects.find.projectName ?? projects.push(projectName);
+    console.log('clicked')
+   this.projects.push(projectName);
+    return this.projects;
     }
 }
-
-export default new ProjectModel();

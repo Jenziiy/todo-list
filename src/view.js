@@ -1,4 +1,4 @@
-import { buttonLogic, el } from "./util";
+import { addProjectLogic, buttonLogic, el } from "./util";
 import { configuration } from "./config";
 
 class View {
@@ -17,6 +17,8 @@ class View {
       this.createPageStructure();
       el('main-wrapper').appendChild(this.createForm());
       buttonLogic();
+      this.addProjectButton();
+      addProjectLogic();
       this.createItemContainer();
     }
 
@@ -100,7 +102,6 @@ class View {
 
     createSelectOptions(id, className, labelName, name, options, wrapperFieldName){
     let label = document.createElement('label');
-    label.className = name+'label';
     let select = document.createElement('select');
     select.name = name;
     select.id = id;
@@ -157,6 +158,14 @@ class View {
       }
     }
     }
+
+  addProjectButton(){
+    let projectAddBtn = document.createElement('button');
+    projectAddBtn.innerText = '+';
+    projectAddBtn.id = 'project-button';
+    projectAddBtn.type = 'button';
+    document.getElementById('project').appendChild(projectAddBtn);
+  }
 }
 
 export default new View();
