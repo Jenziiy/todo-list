@@ -1,7 +1,5 @@
 import { app } from ".";
 import taskListModel from "./Models/ObjectModel";
-import { ProjectModel } from "./Models/ProjectModel";
-import { configuration } from "./config";
 import view from "./view";
 
 export function el(id) { return document.getElementById(id); }
