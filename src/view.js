@@ -100,10 +100,11 @@ class View {
 
     createSelectOptions(id, className, labelName, name, options, wrapperFieldName){
     let label = document.createElement('label');
+    label.className = name+'label';
     let select = document.createElement('select');
     select.name = name;
     select.id = id;
-    select.className = className;
+    select.className = className
     label.for = name;
     label.innerText = labelName;
     const values = options;
