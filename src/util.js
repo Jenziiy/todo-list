@@ -1,4 +1,5 @@
 import taskListModel from "./Models/ObjectModel";
+import { configuration } from "./config";
 import view from "./view";
 
 export function el(id) { return document.getElementById(id); }
@@ -30,8 +31,12 @@ export function getInputColl(...args) {
          }
       }
 export function addProjectLogic(){
-document.getElementById('project-button').addEventListener('click', () => {taskListModel.addProject('hello');
-const projectInput = document.getElementById('project-input');
-projectInput.style.display == 'none' ? projectInput.style.display = 'block' : projectInput.style.display = 'none';
-})
+  document.getElementById('project-button').addEventListener('click', () => {taskListModel.addProject('hello');
+  const projectInput = document.getElementById('project-input');
+  const selectOption = document.createElement('option');
+  selectOption.innerText = projectInput.value;
+  projectInput.value ?? document.getElementById('project-dropdown').add(selectOption);
+  configuration.setProject(projectInput.value);
+  projectInput.style.display == 'none' ? projectInput.style.display = 'block' : projectInput.style.display = 'none';
+  })
   }

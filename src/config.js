@@ -1,3 +1,5 @@
+import view from "./view";
+
 export const configuration = {
   
   priorityArray: [" ", "A - ASAP", "B - This week", "C - 4 fun"],
@@ -6,12 +8,16 @@ export const configuration = {
   get priorities(){
     return this.priorityArray;
   },
-  get projects(){
+  get project(){
     return this.projectCollection;
   },
 
-  set project(project){
+  setProject(project){
+    if(project != '' && this.projectCollection.find(element => element != project)){
     this.projectCollection.push(project);
+        view.addSelectOptions(project)
+    }
+    return this.projectCollection;
   }
 
 }

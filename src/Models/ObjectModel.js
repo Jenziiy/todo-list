@@ -67,36 +67,6 @@ class TaskListModel extends ProjectModel{
     }
 }
 
-export class ToDoItem {
-
-  constructor(title, description, dueDate, priority) {
-    this.title = title ?? 'Missing title';
-    this.description = description ?? 'Missing description';
-    this.dueDate = dueDate;
-    this.priority = priority ?? 'A';
-  }
-
-  createDateFormat(){
-    if (this.dueDate != undefined) { 
-      let dateArr = this.dueDate.toString().split('-'); 
-      return this.dateString = `${dateArr[2]}-${dateArr[1]}-${dateArr[0]}`; 
-      }
-  }
-
-  // remove view logic from model
-  showToDoItem(){
-    const div = document.createElement('div');
-    div.id = 'todo-item';
-    div.innerHTML = `
-    <p> ${this.title ? this.title : 'Missing title'} </p>
-    <p>${this.description ? this.description : 'Missing description'}</p>
-    <p>${ this.createDateFormat()} </p>
-    <p>${this.priority ?? 'Missing priority'}</p>
-    <p> Completed <input type="checkbox" id="complete" name="complete" unchecked> </p> `
-    document.getElementById('item-container').appendChild(div);
-  }
-}
-
 export default new TaskListModel();
 
 // create link between other projects array and creating new objects/ updating existing project objects

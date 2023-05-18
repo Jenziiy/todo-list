@@ -55,7 +55,7 @@ class View {
     containerInputFields.appendChild(this.createFormInput('Description: ', 'add description', 'description', 'reset'));
     containerSelectFields.appendChild(this.createFormDate('Due date: ','date'));
     containerSelectFields.appendChild(this.createSelectOptions('input-dropdown', 'input','Priority: ', 'priority', configuration.priorities, 'inputdiv'));
-    containerButtons.appendChild(this.createSelectOptions('project-dropdown', 'input','Project: ', 'project', configuration.projects, 'projectdiv'));
+    containerButtons.appendChild(this.createSelectOptions('project-dropdown', 'input','Project: ', 'project', configuration.project, 'projectdiv'));
     containerButtons.appendChild(button);
 
 
@@ -114,9 +114,19 @@ class View {
       let option = document.createElement('option');
       option.value = val;
       option.text = val.charAt(0).toUpperCase() + val.slice(1);
-      select.appendChild(option); }
-      return this.createFieldWrapper(name, wrapperFieldName, label, select);
+      select.appendChild(option); 
+    }
+    return this.createFieldWrapper(name, wrapperFieldName, label, select);
+  }
 
+  addSelectOptions(values){
+    let select = document.getElementById('project-dropdown');
+    for (const val of values) {
+      let option = document.createElement('option');
+      option.value = val;
+      option.text = val.charAt(0).toUpperCase() + val.slice(1);
+      select.appendChild(option); 
+    }
   }
 
     createCheckbox(labelName, name){
