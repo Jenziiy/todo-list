@@ -30,6 +30,8 @@ export function getInputColl(...args) {
          }
       }
 export function addProjectLogic(){
-document.getElementById('project-button').addEventListener('click', () => {taskListModel.addProject('hello')})
-
-}
+document.getElementById('project-button').addEventListener('click', () => {taskListModel.addProject('hello');
+const projectInput = document.getElementById('project-input');
+projectInput.style.display == 'none' ? projectInput.style.display = 'block' : projectInput.style.display = 'none';
+})
+  }
