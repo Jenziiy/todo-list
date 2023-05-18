@@ -1,7 +1,11 @@
-export class ProjectModel{
+class ProjectModel{
 
-constructor(itemList){
-  // add itemlist to a project file
-}
-
+  constructor(itemList){
+      projects = [];
+      // add itemlist to a project file
+    }
+    
+  addProject(projectName){
+    !projects.find.projectName ?? projects.push(projectName);
+    }
 }
