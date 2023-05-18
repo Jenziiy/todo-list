@@ -141,4 +141,7 @@ grid-column: span 2;
 
 #project-input{
   display: none;
+  position: absolute;
+  max-width:135px;
+  margin-top: 5px;
 }

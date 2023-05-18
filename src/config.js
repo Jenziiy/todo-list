@@ -15,7 +15,7 @@ export const configuration = {
   setProject(project){
     if(project != '' && this.projectCollection.find(element => element != project)){
     this.projectCollection.push(project);
-        view.addSelectOptions(project)
+        view.addSelectOptions([project])
     }
     return this.projectCollection;
   }

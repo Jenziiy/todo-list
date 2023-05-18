@@ -35,8 +35,9 @@ export function addProjectLogic(){
   const projectInput = document.getElementById('project-input');
   const selectOption = document.createElement('option');
   selectOption.innerText = projectInput.value;
-  projectInput.value ?? document.getElementById('project-dropdown').add(selectOption);
-  configuration.setProject(projectInput.value);
+  projectInput.value ?? document.getElementById('project-dropdown').add(selectOption),
+  configuration.setProject(projectInput.value),
+  projectInput.value = '';
   projectInput.style.display == 'none' ? projectInput.style.display = 'block' : projectInput.style.display = 'none';
   })
   }
