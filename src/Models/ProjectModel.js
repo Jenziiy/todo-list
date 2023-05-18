@@ -13,7 +13,7 @@ export class ProjectModel{
     setProject(project){
       if(project != '' && this.projects.find(element => element != project)){
       this.projects.push(project);
-          view.addSelectOptions([project])
+          
       }
       return this.projects;
     }

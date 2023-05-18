@@ -1,3 +1,5 @@
+import { addProjectLogic } from "./util";
+
 export class Controller {
 
   constructor(model, view){
@@ -10,4 +12,10 @@ export class Controller {
     return this.model.projects;
   }
 
+  handleAddProject = (project) => {
+    this.model.setProject(project);
+    this.view.addSelectOptions([project])
+  }
+
+  addProjectLogic(handleAddProject);
 }

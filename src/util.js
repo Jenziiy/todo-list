@@ -39,5 +39,6 @@ export function addProjectLogic(){
   app.model.setProject(projectInput.value),
   projectInput.value = '';
   projectInput.style.display == 'none' ? projectInput.style.display = 'block' : projectInput.style.display = 'none';
+  return projectInput.value;
   })
   }
