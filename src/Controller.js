@@ -17,5 +17,7 @@ export class Controller {
     this.view.addSelectOptions([project])
   }
 
-  addProjectLogic(handleAddProject);
+  addProjectLogic(handleAddProject){
+    //do something to add proj
+  };
 }
