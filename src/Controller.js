@@ -19,5 +19,6 @@ export class Controller {
 
   addProjectLogic(handleAddProject){
     //do something to add proj
+    addProjectLogic()
   };
 }
