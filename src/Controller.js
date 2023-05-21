@@ -6,6 +6,8 @@ export class Controller {
     this.model = model;
     this.view = view;
     console.log(model.projects)
+    this.handleAddProject();
+    addProjectLogic();
   } 
 
   getProjects(){
@@ -18,6 +20,7 @@ export class Controller {
   }
 
   addProjectLogic(){
+    console.log('im running')
     this.handleAddProject()
     //do something to add proj
     addProjectLogic()
