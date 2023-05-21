@@ -18,7 +18,7 @@ export class Controller {
   }
 
   addProjectLogic(){
-    this.handleAddProject
+    this.handleAddProject()
     //do something to add proj
     addProjectLogic()
   };
