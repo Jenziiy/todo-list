@@ -27,9 +27,8 @@ export class Controller {
     //do something to add proj
     addProjectLogic()
   };
-  
 }
 
-export const app = new Controller(model, View);
+export const app = new Controller(model, view);
 
-app.
+view.bindAddProject(this.handleAddProject)

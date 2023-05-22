@@ -1,8 +1,7 @@
 import { addProjectLogic, buttonLogic, el } from "./util";
 import { configuration } from "./config";
-import { Controller } from "./Controller";
+import { Controller, app } from "./Controller";
 import { ProjectModel } from "./Models/ProjectModel";
-import { app } from ".";
 
 class View {
   date = new Date().toLocaleDateString('en-CA');
