@@ -1,5 +1,3 @@
-import view from "../view";
-
 export class ProjectModel{
   projects = ['default'];
   constructor(){

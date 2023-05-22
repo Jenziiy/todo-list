@@ -1,7 +1,7 @@
+import { Controller } from "./Controller";
 import css from "./file.css";
-import View  from "./view";
-import { Controller, app } from "./Controller";
-import Model from "./Models/ObjectModel";
+import model from "./Models/ObjectModel";
+import view from "./view";
 
+view.createPage();
 app;
-View.createPage();

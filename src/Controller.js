@@ -1,8 +1,8 @@
-import { addProjectLogic } from "./util";
+import model from "./Models/ObjectModel";
 import view from "./view";
-import ObjectModel from "./Models/ObjectModel";
+import { addProjectLogic } from "./util";
 
-export class Controller {
+class Controller {
 
   constructor(model, view){
     this.model = model;
@@ -10,6 +10,7 @@ export class Controller {
     console.log(model.projects)
     this.handleAddProject();
     addProjectLogic();
+    view.createPage();
   } 
 
   getProjects(){
@@ -27,8 +28,9 @@ export class Controller {
     //do something to add proj
     addProjectLogic()
   };
+    
 }
 
-export const app = new Controller(model, view);
+export default new Controller(model, view);
 
-view.bindAddProject(this.handleAddProject)
+view.bindAddProject(app.handleAddProject)

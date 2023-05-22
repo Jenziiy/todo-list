@@ -1,5 +1,3 @@
-import view from "./view";
-
 export const configuration = {
   
   priorityArray: [" ", "A - ASAP", "B - This week", "C - 4 fun"],

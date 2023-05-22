@@ -1,4 +1,3 @@
-import { app } from "./Controller";
 import taskListModel from "./Models/ObjectModel";
 import view from "./view";
 
