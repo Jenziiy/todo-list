@@ -18,15 +18,17 @@ class Controller {
   }
 
   handleAddProject = (project) => {
+    if(project){
     this.model.setProject(project);
     this.view.addSelectOptions([project])
+    }
   }
 
   addProjectLogic(){
     console.log('im running')
     this.handleAddProject()
     //do something to add proj
-    addProjectLogic()
+   // addProjectLogic()
   };
     
 }

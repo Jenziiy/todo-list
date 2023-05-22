@@ -1,8 +1,8 @@
-import { addProjectLogic, buttonLogic, el } from "./util";
 import { configuration } from "./config";
 import { Controller } from "./Controller";
 import { ProjectModel } from "./Models/ProjectModel";
 import model from "./Models/ObjectModel";
+import { buttonLogic, el, addProjectLogic} from "./util";
 
 class View {
   date = new Date().toLocaleDateString('en-CA');
@@ -116,7 +116,7 @@ class View {
     for (const val of values) {
       let option = document.createElement('option');
       option.value = val;
-      option.text = val.charAt(0).toUpperCase() + val.slice(1);
+      option.text = val?.charAt(0).toUpperCase() + val.slice(1);
       select.appendChild(option); 
     }
     return this.createFieldWrapper(name, wrapperFieldName, label, select);
