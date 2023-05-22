@@ -187,6 +187,16 @@ class View {
     projectInput.placeholder = 'new project';
     document.getElementById('project').appendChild(projectInput);
   }
+
+  bindAddProject(handler){
+    const inputText = document.getElementById('project-input').value;
+    document.getElementById('project-button').addEventListener('click', () => {
+    if ( inputText ){
+     handler(inputText)
+    }
+  })
+
+  }
 }
 
 export default new View();
