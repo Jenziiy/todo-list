@@ -4,6 +4,6 @@ import { Controller } from "./Controller";
 import Model from "./Models/ObjectModel";
 
 
-export const app = new Controller(Model, View);
+app
  
 View.createPage();

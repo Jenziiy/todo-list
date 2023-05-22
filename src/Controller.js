@@ -1,4 +1,6 @@
 import { addProjectLogic } from "./util";
+import view from "./view";
+import ObjectModel from "./Models/ObjectModel";
 
 export class Controller {
 
@@ -25,4 +27,9 @@ export class Controller {
     //do something to add proj
     addProjectLogic()
   };
+  
 }
+
+export const app = new Controller(model, View);
+
+app.
