@@ -4,3 +4,5 @@ import model from "./Models/ObjectModel";
 import view from "./view";
 
 app;
+view.bindAddProject(app.handleAddProject);
+model.bindProjectListChanged(app.onProjectAdded);

@@ -9,7 +9,6 @@ class Controller {
     this.view = view;
     console.log(model.projects)
     this.handleAddProject();
-    addProjectLogic();
     view.createPage();
   } 
 
@@ -32,11 +31,10 @@ class Controller {
   };
 
   onProjectAdded = (projects) => { 
-    this.view.addProjectLogic();
-}
+    this.addProjectLogic();
+};
     
 }
 
 export default new Controller(model, view);
 
-view.bindAddProject(view.handleAddProject)

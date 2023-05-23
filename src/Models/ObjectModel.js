@@ -1,3 +1,4 @@
+import Controller from "../Controller";
 import { createDateFormat } from "../util";
 import { ProjectModel } from "./ProjectModel";
 
@@ -64,6 +65,10 @@ class TaskListModel extends ProjectModel{
       }
     }
       return this.otherProjectsArr;
+    }
+
+    bindProjectListChanged(callback){
+      Controller.onProjectAdded = callback;
     }
 }
 
