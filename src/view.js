@@ -188,10 +188,11 @@ class View {
   }
 
   bindAddProject(handler){
-    const inputText = document.getElementById('project-input').value;
+    const projectInputElement = document.getElementById('project-input');
     document.getElementById('project-button').addEventListener('click', () => {
-    if ( inputText ){
-     handler(inputText)
+    if ( projectInputElement.value ){
+     handler(projectInputElement.value)
+     projectInputElement.value = '';
     }
   })
 

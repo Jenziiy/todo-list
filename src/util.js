@@ -35,7 +35,6 @@ export function addProjectLogic(){
     const selectOption = document.createElement('option');
     selectOption.innerText = projectInput.value;
     projectInput.value ?? document.getElementById('project-dropdown').add(selectOption),
-    projectInput.value = '';
     projectInput.style.display == 'none' ? projectInput.style.display = 'block' : projectInput.style.display = 'none';
   return projectInput.value;
   })
