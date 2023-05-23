@@ -30,9 +30,13 @@ class Controller {
     //do something to add proj
    // addProjectLogic()
   };
+
+  onProjectAdded = (projects) => { 
+    this.view.addProjectLogic();
+}
     
 }
 
 export default new Controller(model, view);
 
-view.bindAddProject(app.handleAddProject)
+view.bindAddProject(view.handleAddProject)

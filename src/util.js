@@ -1,4 +1,4 @@
-import taskListModel from "./Models/ObjectModel";
+import model from "./Models/ObjectModel";
 import view from "./view";
 
 export function el(id) { return document.getElementById(id); }
@@ -13,7 +13,7 @@ export function getInputColl(...args) {
 
   export function buttonLogic(){
     let res;
-    return el('add-task-button').addEventListener('click', () => { taskListModel.addItem(...(
+    return el('add-task-button').addEventListener('click', () => { model.addItem(...(
                                     (res = getInputColl('0', '1', '2', '3', '4'))));
                                     view.buildItemView(res);
                                   Array.from(document.getElementsByClassName('reset')).forEach(element => {
@@ -35,7 +35,7 @@ export function addProjectLogic(){
   const selectOption = document.createElement('option');
   selectOption.innerText = projectInput.value;
   projectInput.value ?? document.getElementById('project-dropdown').add(selectOption),
-  app.model.setProject(projectInput.value),
+  model.setProject(projectInput.value),
   projectInput.value = '';
   projectInput.style.display == 'none' ? projectInput.style.display = 'block' : projectInput.style.display = 'none';
   return projectInput.value;
