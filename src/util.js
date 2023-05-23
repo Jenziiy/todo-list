@@ -30,7 +30,7 @@ export function getInputColl(...args) {
          }
       }
 export function addProjectLogic(){
-  document.getElementById('project-button').addEventListener('click', () => {
+  document.getElementById('project-button')?.addEventListener('click', () => {
   const projectInput = document.getElementById('project-input');
   const selectOption = document.createElement('option');
   selectOption.innerText = projectInput.value;

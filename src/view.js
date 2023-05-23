@@ -1,6 +1,5 @@
 import { configuration } from "./config";
 import { Controller } from "./Controller";
-import { ProjectModel } from "./Models/ProjectModel";
 import model from "./Models/ObjectModel";
 import { buttonLogic, el, addProjectLogic} from "./util";
 
@@ -58,7 +57,7 @@ class View {
     containerInputFields.appendChild(this.createFormInput('Description: ', 'add description', 'description', 'reset'));
     containerSelectFields.appendChild(this.createFormDate('Due date: ','date'));
     containerSelectFields.appendChild(this.createSelectOptions('input-dropdown', 'input','Priority: ', 'priority', configuration.priorities, 'inputdiv'));
-    containerButtons.appendChild(this.createSelectOptions('project-dropdown', 'input','Project: ', 'project', model.getProjects(), 'projectdiv'));
+    containerButtons.appendChild(this.createSelectOptions('project-dropdown', 'input','Project: ', 'project', model.projects, 'projectdiv'));
     containerButtons.appendChild(button);
 
 
