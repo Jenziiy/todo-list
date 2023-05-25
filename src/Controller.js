@@ -26,8 +26,6 @@ class Controller {
   addProjectLogic(){
     console.log('im running')
     this.handleAddProject()
-    //do something to add proj
-   // addProjectLogic()
   };
 
   onProjectAdded = (projects) => { 
