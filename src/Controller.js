@@ -34,6 +34,7 @@ class Controller {
     this.addProjectLogic();
 };
     
+
 }
 
 export default new Controller(model, view);
