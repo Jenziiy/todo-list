@@ -198,7 +198,11 @@ class View {
 
   }
 
-  addNewProjectView(){
+  addNewProjectView(projects){
+    projects.forEach(project => {
+      const btn = document.createElement('button');
+      btn.classList.add(project, 'projectlist-item');     
+    });
     //create method to render a tab(button) per page/view, 
     //which we can expand via click in order to show the selection of todo lists
     // assign by class of item ? 
