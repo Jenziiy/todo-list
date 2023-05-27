@@ -210,10 +210,9 @@ class View {
   }
 
   viewTasksPerProject(){
-    const projectItemCollection = Array.from(document.getElementsByClassName('projectlist-item'));
-      
-    });
+    const projectItemCollection = Array.from(document.getElementsByClassName('projectlist-item'))
+  };
   }
-}
+
 
 export default new View();
