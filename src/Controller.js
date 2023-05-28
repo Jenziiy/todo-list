@@ -30,8 +30,9 @@ class Controller {
 
   onProjectAdded = (projects) => { 
     this.addProjectLogic();
+    this.view.
 };
-    
+
 
 }
 
