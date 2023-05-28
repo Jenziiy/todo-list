@@ -198,7 +198,7 @@ class View {
 
   }
 
-  addNewProjectView(projects){
+  bindAddNewProjectView(projects){
     projects.forEach(project => {
       const btn = document.createElement('button');
       btn.classList.add(project, 'projectlist-item');   
@@ -210,7 +210,7 @@ class View {
   }
 
   viewTasksPerProject(){
-    const projectItemCollection = Array.from(document.getElementsByClassName('projectlist-item'))
+    const projectItemCollection = Array.from(document.getElementsByClassName('projectlist-item')) 
   };
   }
 
