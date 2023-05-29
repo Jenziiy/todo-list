@@ -1,5 +1,4 @@
 import { configuration } from "./config";
-import { Controller } from "./Controller";
 import model from "./Models/ObjectModel";
 import { buttonLogic, el, addProjectLogic} from "./util";
 
@@ -198,7 +197,7 @@ class View {
 
   }
 
-  bindAddNewProjectView(projects){
+  addNewProjectView(projects){
     projects.forEach(project => {
       const btn = document.createElement('button');
       btn.classList.add(project, 'projectlist-item');   
