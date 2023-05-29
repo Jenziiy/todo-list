@@ -203,7 +203,7 @@ class View {
     projects.forEach(project => {
       const btn = document.createElement('button');
       btn.classList.add(project, 'projectlist-item');   
-      btn.addEventListener('click', this.viewTasksPerProject);  
+      btn.addEventListener('click', (e) => this.viewTasksPerProject(e.target.innerText));  
       projectNavigator.appendChild(btn);
     });
     const projectContainer = document.createElement('div');
@@ -212,8 +212,10 @@ class View {
     // assign by class of item ? 
   }
 
-  viewTasksPerProject(){
+  viewTasksPerProject(projectName){
     const projectItemCollection = Array.from(document.getElementsByClassName('projectlist-item')) 
+    projectItemCollection.filter((item) => item.innerText !== projectName);
+    console.log(projectItemCollection);
   };
   }
 
