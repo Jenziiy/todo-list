@@ -10,6 +10,7 @@ class View {
 
     htmlPageStructure = {
       header: document.createElement('header'),
+      nav: document.createElement('nav'),
       main:  document.createElement('main'),
       footer: document.createElement('footer'),
     }
@@ -198,11 +199,14 @@ class View {
   }
 
   addNewProjectView(projects){
+    const projectNavigator = document.getElementsByTagName('nav')[0];
     projects.forEach(project => {
       const btn = document.createElement('button');
       btn.classList.add(project, 'projectlist-item');   
       btn.addEventListener('click', this.viewTasksPerProject);  
+      projectNavigator.appendChild(btn);
     });
+    const projectContainer = document.createElement('div');
     //create method to render a tab(button) per page/view, 
     //which we can expand via click in order to show the selection of todo lists
     // assign by class of item ? 

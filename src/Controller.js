@@ -19,7 +19,8 @@ class Controller {
   handleAddProject = (project) => {
     if(project){
     this.model.setProject(project);
-    this.view.addSelectOptions([project])
+    this.view.addSelectOptions([project]);
+    this.view.addNewProjectView([project]);
     }
   }
 

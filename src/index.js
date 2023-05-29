@@ -6,4 +6,4 @@ import view from "./view";
 app;
 view.bindAddProject(app.handleAddProject);
 model.bindProjectListChanged(app.onProjectAdded);
-view.bindAddNewProjectView(app.handleAddProject);
+// view.bindAddNewProjectView(app.handleAddProject);
