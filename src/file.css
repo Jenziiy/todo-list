@@ -145,3 +145,7 @@ grid-column: span 2;
   max-width:135px;
   margin-top: 5px;
 }
+
+#project-button{
+  width: 10px;
+}
