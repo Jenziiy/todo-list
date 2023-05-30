@@ -146,6 +146,6 @@ grid-column: span 2;
   margin-top: 5px;
 }
 
-#project-button{
-  width: 10px;
+#projectlist-item{
+  width: 50px;
 }
