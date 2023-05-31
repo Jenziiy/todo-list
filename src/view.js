@@ -214,8 +214,9 @@ class View {
 
   viewTasksPerProject(projectName){
     const projectItemCollection = Array.from(document.getElementsByClassName('projectlist-item')) 
-    projectItemCollection.filter((item) => item.innerText !== projectName);
+    const filteredProjects = projectItemCollection.filter((item) => item.innerText !== projectName);
     console.log(projectItemCollection);
+    console.log(filteredProjects);
   };
   }
 
