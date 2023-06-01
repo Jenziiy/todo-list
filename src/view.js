@@ -218,6 +218,7 @@ class View {
     console.log(projectItemCollection);
     console.log(filteredProjects);
   };
+  // add  comment
   }
 
 
