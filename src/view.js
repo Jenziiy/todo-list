@@ -217,8 +217,8 @@ class View {
     const filteredProjects = projectItemCollection.filter((item) => item.innerText !== projectName);
     console.log(projectItemCollection);
     console.log(filteredProjects);
+    return projectItemCollection;
   };
-  // add  comment
   }
 
 
